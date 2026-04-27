@@ -46,7 +46,7 @@ def askModel(prompt, temperature=0):
 
 #two seperate as it makes life easier 
 def make3Prompt(i, j, s):
-    return f""" Check if these three answers are all the same in meaning. Answer 1 {i}. Answer 2 {j}. Answer{s}. Answer this question with true or false.   """
+    return f""" Check if these three answers are all the same in meaning. Answer 1 {i}. Answer 2 {j}. Answer 3{s}. Answer this question with true or false.   """
 
 def make2Prompt(i, j):
     return f""" Check if these two answers share the same meaning. Answer 1 {i}. Answer 2 {j}. Answer this question with true or false.   """

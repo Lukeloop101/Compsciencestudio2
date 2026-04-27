@@ -33,7 +33,7 @@ for i, item in enumerate(questions, start=1):
     
     # This is the entire conistency for each with long output recheck
     resultsCons = analyse_question(question, answer, aliases, n=10)
-    resultsConsistency.appened(resultsCons)
+    resultsConsistency.append(resultsCons)
     
     
     # self
@@ -55,7 +55,7 @@ for i, item in enumerate(questions, start=1):
     #unreversing it but will be screwed looking at results maybe get Chris
     tokenuncertainty = resultFromToken.get("uncertainty_score")
 
-    tokenConfidence = None
+    tokenConfidence = 0
     if tokenuncertainty is not None:
         tokenConfidence = 1 - tokenuncertainty
 
@@ -67,18 +67,85 @@ for i, item in enumerate(questions, start=1):
     #ratio is 0.4 token 0.3 consistency 0.3 self confidence
     #Now we should be able to compare the results and conbine them
     #so we are checking if the answers are correcct 
-    if resultsConsistency and confidence and resultsToken:
-        combined_score = 0.4 * resultsConsistency + 0.3 * confidence + 0.3 * resultsToken
-        print(f"Combined Score: {combined_score}")
-    else if resultsConsistency and confidence:
-        combined_score = 0.4 * resultsConsistency + 0.3 * confidence
-        print(f"Combined Score (without token): {combined_score}")
-    else if resultsConsistency and resultsToken:
-        combined_score = 0.4 * resultsConsistency + 0.3 * resultsToken
-        print(f"Combined Score (without self confidence): {combined_score}")
-    else if confidence and resultsToken:
-        combined_score = 0.3 * confidence + 0.3 * resultsToken
-        print(f"Combined Score (without consistency): {combined_score}")
-        #final else if choosing the most highest conf
-    #Yep more else ifs
-    else if 
+    
+    #what I need is each of the answers
+    answerSelf = clean(answer_data.get("answer", "")) 
+    answerToken = resultFromToken.get("generated_answer")
+    answerConsistency = clean(resultsCons.get("most_common_answer", ""))
+    
+    #scores somewhere above but the names were
+    #tokenConfidence 
+    selfConfidence = answer_data.get("confidence", None)
+    consistencyConfidence = resultsCons.get("consistency_score", None)
+    #then in each if I check if they are the same usingAI its not perfect But I dont Care
+    #combined_score = 0.4 * resultsConsistency + 0.3 * confidence + 0.3 * resultsToken
+    combinedScore = 0;
+    if (askModel(make3Prompt(answerToken, answerConsistency, answerSelf))):
+        
+    else if (askModel(make2Prompt(answerToken, answerConsistency))):
+        
+    else if (askModel(make2Prompt(answerSelf, answerConsistency))):
+        
+    else if (askModel(make2Prompt(answerSelf, answerToken))):
+        
+    else:
+        
+    
+    # if resultsConsistency and confidence and resultsToken:
+    #     combined_score = 0.4 * resultsConsistency + 0.3 * confidence + 0.3 * resultsToken
+    #     print(f"Combined Score: {combined_score}")
+    # else if resultsConsistency and confidence:
+    #     combined_score = 0.4 * resultsConsistency + 0.3 * confidence
+    #     print(f"Combined Score (without token): {combined_score}")
+    # else if resultsConsistency and resultsToken:
+    #     combined_score = 0.4 * resultsConsistency + 0.3 * resultsToken
+    #     print(f"Combined Score (without self confidence): {combined_score}")
+    # else if confidence and resultsToken:
+    #     combined_score = 0.3 * confidence + 0.3 * resultsToken
+    #     print(f"Combined Score (without consistency): {combined_score}")
+    #     #final else if choosing the most highest conf
+    # #Yep more else ifs Dont care Im Just setting to Token as it has the highhest weighting
+    # else:
+    
+    
+    
+    
+    
+    
+def askModel(prompt, temperature=0):
+    response = client.chat.completions.create(
+        model="llama3.1:8b",
+        messages=[
+            {
+                "role": "system",
+                "content": "Answer ONLY with true or false. No explanation."
+                #"question": "Are these answers the same as the prompt"
+            },
+            {"role": "user", "content": prompt},
+        ],
+        temperature=temperature,
+        max_tokens=5,
+    )
+    output = response.choices[0].message.content.strip().lower()
+
+    if "true" in output:
+        return True
+    elif "false" in output:
+        return False
+    else:#incase something dumb happendsit just ignore's
+        return False  
+#Shit way but a array of the answers I need for that Time Its Kinda Mid ButHey
+# def makePrompt(theArray):
+#     output= "Can I get"
+#     count=1
+#     for(answer : theArray):
+#         output =output + " "+ count+")"+ answer
+#         count++
+#     return output
+
+#two seperate as it makes life easier 
+def make3Prompt(i, j, s):
+    return f""" Check if these three answers are all the same in meaning. Answer 1 {i}. Answer 2 {j}. Answer{s}. Answer this question with true or false.   """
+
+def make2Prompt(i, j):
+    return f""" Check if these two answers share the same meaning. Answer 1 {i}. Answer 2 {j}. Answer this question with true or false.   """

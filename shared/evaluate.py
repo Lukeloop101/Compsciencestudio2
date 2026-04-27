@@ -4,6 +4,54 @@ import numpy as np
 from datasets import load_dataset
 from scorer import get_token_prob_score
 
+
+
+def askModel(prompt, temperature=0):
+    response = client.chat.completions.create(
+        model="llama3.1:8b",
+        messages=[
+            {
+                "role": "system",
+                "content": "Answer ONLY with true or false. No explanation."
+                #"question": "Are these answers the same as the prompt"
+            },
+            {"role": "user", "content": prompt},
+        ],
+        temperature=temperature,
+        max_tokens=5,
+    )
+    output = response.choices[0].message.content.strip().lower()
+
+    if "true" in output:
+        return True
+    elif "false" in output:
+        return False
+    else:#incase something dumb happendsit just ignore's
+        return False  
+#Shit way but a array of the answers I need for that Time Its Kinda Mid ButHey
+# def makePrompt(theArray):
+#     output= "Can I get"
+#     count=1
+#     for(answer : theArray):
+#         output =output + " "+ count+")"+ answer
+#         count++
+#     return output
+
+#two seperate as it makes life easier 
+def make3Prompt(i, j, s):
+    return f""" Check if these three answers are all the same in meaning. Answer 1 {i}. Answer 2 {j}. Answer{s}. Answer this question with true or false.   """
+
+def make2Prompt(i, j):
+    return f""" Check if these two answers share the same meaning. Answer 1 {i}. Answer 2 {j}. Answer this question with true or false.   """
+
+
+#######################
+#the actual run part
+#############
+
+
+
+
 #my goal is first to figure out how the differnt models are answering the questions, and then to figure out how to evaluate the answers. I will start with the first part, and then move on to the second part.
 
 # Keep this small at first so runtime is manageable the dataset 
@@ -24,6 +72,7 @@ for item in dataset:
 resultsConsistency = []
 resultsSelf = []
 resultsToken = []
+resultsCombined = []
 for i, item in enumerate(questions, start=1):
     question = item["question"]
     answer = item["answer"]
@@ -70,27 +119,55 @@ for i, item in enumerate(questions, start=1):
     
     #what I need is each of the answers
     answerSelf = clean(answer_data.get("answer", "")) 
-    answerToken = resultFromToken.get("generated_answer")
+    answerToken = clean(resultFromToken.get("generated_answer", ""))
     answerConsistency = clean(resultsCons.get("most_common_answer", ""))
     
-    #scores somewhere above but the names were
+    #scores somewhere above but the names weres
     #tokenConfidence 
     selfConfidence = answer_data.get("confidence", None)
     consistencyConfidence = resultsCons.get("consistency_score", None)
     #then in each if I check if they are the same usingAI its not perfect But I dont Care
     #combined_score = 0.4 * resultsConsistency + 0.3 * confidence + 0.3 * resultsToken
     combinedScore = 0;
+    combindedAnswer = "Something went wrong if this is the final answer" #spelt wrong how dumb are you me
+    combinedIsTrue = False
+    #bad solution using only one of the answers as the conbinedAnswer
     if (askModel(make3Prompt(answerToken, answerConsistency, answerSelf))):
-        
-    else if (askModel(make2Prompt(answerToken, answerConsistency))):
-        
-    else if (askModel(make2Prompt(answerSelf, answerConsistency))):
-        
-    else if (askModel(make2Prompt(answerSelf, answerToken))):
-        
-    else:
-        
+        combinedScore = (0.3 * consistencyConfidence +0.3 *selfConfidence +0.4* tokenConfidence)
+        print("using all 3: ", combinedScore)
+        #Use conistency as least chance to be carrying on
+        combindedAnswer = clean(resultsCons.get("most_common_answer", ""))
+        combinedIsTrue = resultsCons.get("is_correct")
+    elif (askModel(make2Prompt(answerToken, answerConsistency))):
+        combinedScore = 0.3 * consistencyConfidence + 0.4 * tokenConfidence
+        print("using Token and Consistency: ", combinedScore)
+        combindedAnswer = clean(resultsCons.get("most_common_answer", ""))
+        combinedIsTrue = resultsCons.get("is_correct")
+    elif (askModel(make2Prompt(answerSelf, answerConsistency))):
+        combinedScore = 0.4 * consistencyConfidence + 0.3 * selfConfidence
+        print("using Self and Consistency: ", combinedScore)
+        combindedAnswer = clean(resultsCons.get("most_common_answer", ""))
+        combinedIsTrue = resultsCons.get("is_correct")
+    elif (askModel(make2Prompt(answerSelf, answerToken))):
+        combinedScore = 0.3 * selfConfidence + 0.4 * tokenConfidence
+        print("using Self and Token: ", combinedScore)
+        combindedAnswer = resultFromToken.get("generated_answer")
+        combinedIsTrue = is_match(answerToken, clean(answer))
+    else:#I dont care we just using token Im not dealing with more 
+        #if someone does want to do right I assume you choose the one with the highest confidence score
+        combinedScore =  0.4 * tokenConfidence
+        combindedAnswer = resultFromToken.get("generated_answer")
+        combinedIsTrue = is_match(answerToken, clean(answer))
+        print("using just one: ", combinedScore)
     
+    
+    
+    resultsCombined.append({
+    "question": question,
+    "combined_answer": combindedAnswer,
+    "combined_score": combinedScore,
+    "combined_correct": combinedIsTrue
+    })  
     # if resultsConsistency and confidence and resultsToken:
     #     combined_score = 0.4 * resultsConsistency + 0.3 * confidence + 0.3 * resultsToken
     #     print(f"Combined Score: {combined_score}")
@@ -111,41 +188,4 @@ for i, item in enumerate(questions, start=1):
     
     
     
-    
-def askModel(prompt, temperature=0):
-    response = client.chat.completions.create(
-        model="llama3.1:8b",
-        messages=[
-            {
-                "role": "system",
-                "content": "Answer ONLY with true or false. No explanation."
-                #"question": "Are these answers the same as the prompt"
-            },
-            {"role": "user", "content": prompt},
-        ],
-        temperature=temperature,
-        max_tokens=5,
-    )
-    output = response.choices[0].message.content.strip().lower()
-
-    if "true" in output:
-        return True
-    elif "false" in output:
-        return False
-    else:#incase something dumb happendsit just ignore's
-        return False  
-#Shit way but a array of the answers I need for that Time Its Kinda Mid ButHey
-# def makePrompt(theArray):
-#     output= "Can I get"
-#     count=1
-#     for(answer : theArray):
-#         output =output + " "+ count+")"+ answer
-#         count++
-#     return output
-
-#two seperate as it makes life easier 
-def make3Prompt(i, j, s):
-    return f""" Check if these three answers are all the same in meaning. Answer 1 {i}. Answer 2 {j}. Answer{s}. Answer this question with true or false.   """
-
-def make2Prompt(i, j):
-    return f""" Check if these two answers share the same meaning. Answer 1 {i}. Answer 2 {j}. Answer this question with true or false.   """
+    #asking

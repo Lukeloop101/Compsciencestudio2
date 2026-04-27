@@ -1,201 +1,201 @@
 question,ground_truth,model_answer,confidence,is_correct,parse_failed
-Who was the man behind The Chipmunks?,david seville,ross bagdasarian sr,0.95,False,False
-Which Lloyd Webber musical premiered in the US on 10th December 1993?,sunset boulevard,sunset boulevard,0.83,True,False
-Who was the next British Prime Minister after Arthur Balfour?,campbellbannerman,henry campbellbannerman,0.83,True,False
-Who had a 70s No 1 hit with Kiss You All Over?,exile,exile,0.83,True,False
-What claimed the life of singer Kathleen Ferrier?,cancer,a heart attack,0.83,False,False
-Rita Coolidge sang the title song for which Bond film?,octopussy,octopussy,0.85,True,False
-What was the last US state to reintroduce alcohol after prohibition?,utah,missouri,0.8,False,False
-Which actress was voted Miss Greenwich Village in 1942?,lauren bacall,claudia barrett later known as claudia barrett was indeed voted miss greenwich village in 1942,0.7,False,False
-What is the Japanese share index called?,nikkei,nikkei,0.95,True,False
-What was the name of Michael Jackson's autobiography written in 1988?,moonwalk,moonwalk,0.56,True,False
-In which decade did stereo records first go on sale?,1930s,1958,0.73,False,False
-In what year's Olympics were electric timing devices and a public-address system used for the first time?,in 1912 in stockholm,1936,0.83,False,False
-Which volcano in Tanzania is the highest mountain in Africa?,kilimanjaro,mount kilimanjaro,0.95,True,False
-The flag of Libya is a plain rectangle of which color?,green,red,0.83,False,False
-Of which African country is Niamey the capital?,niger,niger,0.95,True,False
-Who was the director of the CIA from 1976-81?,george bush,stansfield turner,0.83,False,False
-Which musical featured the song The Street Where You Live?,my fair lady,my fair lady,0.85,True,False
-"""Who was the target of the failed """"Bomb Plot"""" of 1944?""",hitler,king george vi,0.75,False,False
-Who had an 80s No 1 hit with Hold On To The Nights?,richard marx,richard marx,0.83,True,False
-Who directed the classic 30s western Stagecoach?,john ford,john ford,0.95,True,False
-Dave Gilmore and Roger Waters were in which rock group?,pink floyd,pink floyd,0.95,True,False
-Which highway was Revisited in a classic 60s album by Bob Dylan?,61,highway 61,0.95,True,False
-Which was the only eastern bloc country to participate in the 1984 LA Olympics?,rumania,romania,0.85,False,False
-Which 90s sci fi series with James Belushi was based on Bruce Wagner's comic strip of the same name?,wild palms,wild palms,0.56,True,False
-If I Were A Rich Man Was a big hit from which stage show?,fiddler on the roof,fiddler on the roof,0.95,True,False
-Men Against the Sea and Pitcairn's Island were two sequels to what famous novel?,mutiny on the bounty,mutiny on the bounty,0.95,True,False
-What was Truman Capote's last name before he was adopted by his stepfather?,persons,capote,0.95,False,False
-"In Lewis Carroll's poem The Hunting of the Snark, what did the elusive, troublesome snark turn into to fool hunters?",a boojum,a boojum,0.95,True,False
-"In the Bible, who did the sun and moon stand still before?",joshua,joshua,0.95,True,False
-What Michelle Pfeiffer movie got a boost from the Coolio song Gangsta's Paradise?,dangerous minds,dangerous minds,0.83,True,False
-What was President Gerald Ford's middle name?,rudolph,gerald rudolph ford jr,0.95,True,False
-Art Garfunkel trained for which profession although he didn't qualify?,architect,medicine,0.83,False,False
-Who was the last inmate of Spandau jail in Berlin?,rudolf hess,john george haighs remains were buried at an unknown location but john demjanjuk also known as ivan the terrible was the last person to be imprisoned at spandau prison before it closed however the last inmate of note is often considered to be rudolf hess,0.67,True,False
-What was Eddie Murphy's first movie?,48 hours,48 hrs,0.85,False,False
-In the 80s who wrote the novel Empire of The Sun?,j g ballard,jg ballard,0.83,False,False
-Kagoshima international airport is in which country?,japan,japan,0.95,True,False
-In which sport could the Pacers take on the Pistons?,a basketball,basketball,0.95,True,False
-Kim Carnes' nine weeks at No 1 with Bette Davis Eyes was interrupted for one week by which song?,stars on 45 medley,believe it or not love and happiness,0.85,False,False
-Where in Canada is the Lion's Gate bridge?,vancouver,vancouver british columbia,0.85,True,False
-What was Walter Matthau's first movie?,the kentuckian,battle hymn 1957,0.7,False,False
-Otis Barton was a pioneer in exploring where?,underwater,underwater caves and deepsea diving,0.87,True,False
-Where in England was actor Nigel Hawthorne born?,coventry,essex england,0.83,False,False
-"What mythological beast has the head of a man, the body of a lion, and the tail and feet of a dragon?",a manticore,minotaur,0.83,False,False
-"In Greek mythology, who were Arges, Brontes and Steropes?",cyclopes,the cyclopes,0.85,True,False
-Which musician founded the Red Hot Peppers?,jelly roll morton,anthony kiedis,0.72,False,False
-Where did the Shinning Path terrorists operate?,peru,peru,0.83,True,False
-How old was Jimi Hendrix when he died?,27,27,0.8,True,False
-Which Brit broke the land speed record in 1990 in Thrust 2?,richard noble,richard noble,0.95,True,False
-In which state was Gene Vincent born?,virginia,virginia,0.8,True,False
-How was the European Recovery Program in the 1940s more commonly known?,marshall plan,the marshall plan,0.87,True,False
-Brandon Lee died during the making of which movie?,the crow,the crow,0.95,True,False
-Who had a 70s No 1 hit with Let's Do It Again?,the staple singers,the staple singers,0.83,True,False
-Who had a Too Legit To Quit Tour?,mc hammer,mc hammer,0.95,True,False
-"""According to Rudyard Kipling what were the """"two imposters"""" to meet and treat the same day?""",triumph and disaster,opportunity and change,0.85,False,False
-Who is the most successful UK solo artist in the USA?,elton john,elton john,0.83,True,False
-Which country does the airline TAAG come from?,angola,angola,0.83,True,False
-Which US No 1 single came from Diana Ross's platinum album Diana?,upside down,upside down,0.95,True,False
-River Phoenix died during the making of which movie?,dark blood,dark blood,0.8,True,False
-Which artist David was born in Bradford UK?,hockney,david hockney,0.83,True,False
-What is Mel Gibson's middle name?,columcille,edward,0.45,False,False
-Richard Daley was mayor of which city for 21 years?,chicago,chicago,0.95,True,False
-"""In which movie did Garbo say, """"I want to be alone"""".""",grand hotel,grand hotel 1932,0.95,True,False
-What is Osbert Lancaster best known for producing?,cartoons,cartoonist and author of they came next and the rise of the rich,0.83,False,False
-Who was the defending champion when Martina Navratilova first won Wimbledon singles?,virginia wade,chris evert,0.83,False,False
-Who was the first US-born winner of golf's British Open?,walter hagen,richard tufts but some sources say it was richard dedring or possibly richard tufts rival richard dedrings opponent although there is no clear consensus on this matter,0.43,False,False
-In which country is the Sky Train Rail bridge?,canada,canada,0.58,True,False
-What was the Paramount Film Company originally called?,famous players film company,adolph zukors famous players film company,0.8,True,False
-Who was the first person after Scott to reach the South Pole overland?,edmond hillary,roald amundsen,0.95,False,False
-Which journalist first told the world about the My Lai massacre?,seymour hersh,seymour hersh,0.83,True,False
-What is the name of Terence and Shirley Conran's dress designer son?,jasper,jasper conran,0.85,True,False
-Which drink did The Spice Girls promote?,pepsi,pepsi,0.8,True,False
-Who was the youngest brother in the Beach Boys?,carl wilson,carl wilson,0.83,True,False
-Who first hosted Family Feud?,richard dawson,richard dawson,0.95,True,False
-What did the Lone Ranger's title Kemo Sabe mean in Apache?,white shirt,trusted friend or blood brother,0.83,False,False
-Who or what was Gentle Ben in the 60s TV series?,bear cub,a giant black dog a pet of a family living in the florida everglades,0.95,False,False
-Which 70s show was based on the British show Till Death Us Do Part?,all in the family,all in the family,0.95,True,False
-On what date in 1969 did Neil Armstrong first set foot on the Moon?,july 20th,july 20 1969,0.95,False,False
-Bandar Seri Begawan International airport is in which country?,brunei,brunei,0.8,True,False
-What was the profession of Paul Strand (1890 - 1976)?,photographer,photographer and filmmaker,0.85,True,False
-Who had a 60s No 1 with Downtown?,petula clark,petula clark,0.83,True,False
-"Who was born first, Kiefer Sutherland or Christian Slater?",kiefer sutherland,kiefer sutherland,0.85,True,False
-"To the nearest two, how many tennis Grand Slam titles did Jimmy Connors win?",10,8,0.65,False,False
-Who was the Georgia Peach?,ty cobb,ty cobb,0.87,True,False
-Who set fire to his guitar at the Monterey Pop festival in 19676?,jimi hendrix,jimi hendrix,0.95,True,False
-Della Street was whose secretary?,perry mason,perry masons,0.95,True,False
-"In music, who was Sweet and Innocent and Too Young?",donny osmond,connie francis,0.83,False,False
-Who is featured on Puff Daddy's Can't Hold Me Down?,mase,mase and kelly price but mainly mase,0.65,True,False
-What had Edmond Hillary worked at before taking up mountain climbing?,bee keeping,royal new zealand air force,0.83,False,False
-In which American state is the Isabella Stewart Gardner Museum?,massachusetts,massachusetts,0.95,True,False
-Benina international airport is in which country?,libya,libya,0.83,True,False
-Beloved in 1999 was whose first movie since The Color Purple in 1985?,oprah winfrey,whoopi goldberg,0.83,False,False
-Which Star Trek star directed Three Men and a Baby?,leonard nimoy,leonard nimoy,0.55,True,False
-Which sitcom star appeared on the big screening The Object of My Affection?,jennifer aniston,jennifer aniston,0.56,True,False
-"""Which character did Julia """"Roberts play in Steven Spielberg's Hook?""",tinkerbell,tinker bell,0.64,False,False
-Which US president did Anthony Hopkins play in a film whose title was simply his name?,nixon,nixon,0.95,True,False
-Which movie was a biopic about the life of David Helfgott?,shine,shine,0.95,True,False
-Which film director guested as the FBI Director in The Silence of the Lambs?,roger corman,jonathan demme,0.95,False,False
-In which sci fi classic did the space ship Nostromo first appear?,alien,alien 1979,0.95,True,False
-Nigel Hawthorne was Oscar nominated for The Madness of which King?,george,george iii,0.95,True,False
-Which Swedish actress won the Best Supporting Actress Oscar for Murder on the Orient Express?,ingrid bergman,ingrid bergman,0.95,True,False
-Which Oscar-nominated film had You Sexy Thing as its theme song?,the full monty,scott pilgrim vs the world,0.8,False,False
-Which Joan's career revived in Whatever Happened to Baby Jane?,crawford,bette davis,0.95,False,False
-Which much-loved actor won the Best Actor Oscar for The Philadelphia Story?,james stewart,gregory peck was not in this film but gregory peck did win an oscar for best actor however james stewart did star in the philadelphia story and was nominated for best actor but he didnt win that particular year the best actor award went to gary cooper for high noon but the lead male role in the philadelphia story which is a romantic comedy starred cary grant,0.67,True,False
-Which legendary dancer was Oscar-nominated for The Towering Inferno?,fred astaire,fred astaire,0.83,True,False
-What was the name of the brothel in The Best Little Whorehouse in Texas?,chicken ranch,the chicken ranch,0.83,True,False
-Who was the male star of the movie The Man of La Mancha?,peter otoole,peter otoole,0.95,True,False
-What relation is Joey Richardson to Vanessa Redgrave?,daughter,joey richardson is vanessa redgraves daughter,0.57,True,False
-Melanie Molitor is the mom of which tennis world NO 1?,martina hingis,martina hingis,0.87,True,False
-Marc Dutroux hit the headlines over a 'house of horrors' in which country?,belgium,belgium,0.8,True,False
-On which date in 1945 did Hitler take cyanide then shoot himself?,april 30th,april 30 1945,0.95,False,False
-In which river is the Boulder Dam?,colorado,colorado river,0.83,True,False
-"Which sports event was first held at Worcester, Massachusetts in 1927?",ryder cup,worcester marathon,0.6,False,False
-In which European city is the Belvederen Gallery?,vienna,rome italy,0.85,False,False
-How old was Woody Herman when he founded his own orchestra?,13,woody herman founded his own orchestra in 1936 so he was around 25 years old,0.65,False,False
-For which movie did Katharine Hepburn win her second Oscar?,guess whos coming to dinner,guess whos coming to dinner 1967,0.65,True,False
-Who had a 60s No 1 hit with This Diamond Ring?,gary lewis and the playboys,gary lewis and the playboys,0.8,True,False
-The world was first aware of the Chernobyl disaster after detectors were triggered at a nuclear plant in which country?,sweden,ukraine,0.83,False,False
-In which country was the first permanent bungee jumping site situated?,new zealand,new zealand,0.85,True,False
-Who succeeded Brezhnev as Soviet premier?,andropov,yuri andropov,0.83,True,False
-In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small chldren?,baby buggy,the baby carrier or sling,0.83,False,False
-In which city's shipyard was Solidarity set up?,gdansk poland,gdańsk,0.83,False,False
-Which female singer was born on exactly the same day as impressionist Rich Little?,tina turner,shirley maclaine and rich little were both born on november 30 1939,0.43,False,False
-What is Harrison Ford's real name?,harrison ford,alan marvin gurrie,0.8,False,False
-Who's home runs record did Mark McGwire break in the 1998 season?,roger maris,roger maris,0.83,True,False
-Who won baseball's first World Series of the 80s?,philadelphia phillies,philadelphia phillies,0.83,True,False
-What was Pete Sampras seeded when he won his first US Open?,12,1,0.65,True,False
-"""Which boxer famously said,"""" If I can't beat this bum take my name off the record books?""""""",rocky marciano,joe louis,0.83,False,False
-Where did Jonathan Edwards set his 1995 triple jump world record?,sweden,goteborg sweden,0.42,True,False
-"In baseball, where do the Orioles come from?",baltimore,baltimore maryland,0.95,True,False
-The Naismith Award is presented in which sport?,basket ball,college basketball,0.83,False,False
-Which cartoon and film character is the nickname of super athlete Michael Johnson?,superman,flash,0.83,False,False
-For which team did Babe Ruth blast his last Major League home run?,boston braves,boston red sox,0.83,False,False
-What was Warren Beatty's first movie?,splendor in the grass,all that heaven allows 1955,0.85,False,False
-"Which future Hollywood star got her break as Wonder Girl, Wonder Woman's sister Drusilla?",debra winger,lynda carter,0.85,False,False
-Mickey Braddock in the 50s series Circus Boy found fame with which surname in which pop band?,mickey dolenz the monkees,harrison in the beatles,0.55,False,False
-Which war veteran was Director of News & Special Events for ABC before find fame as a TV cop?,tom selleck,jack webb,0.95,False,False
-What US sitcom was the first exported to Britain?,amos n andy,fawlty towers is often cited as a british sitcom but it was actually an adaptation of john cleeses us sitcom fawlty which was not widely known in the uk at the time however the first us sitcom to be exported to britain is often credited to be i dream of jeannie,0.67,False,False
-In Hanna and Barbera's TV cartoons base on The Addams Family who was the voice of Gomez?,john astin,john astin,0.83,True,False
-Who was the only female victim to be killed off in the opening credit sequence in Police Squad?,florence henderson,evelyn argote,0.85,False,False
-Which US president won the Nobel Peace Prize in 1920?,woodrow wilson,woodrow wilson,0.85,True,False
-Who beat Tim Henman in his first Wimbledon singles semifinal?,pete sampras,pete sampras,0.8,True,False
-What relation was Flo Jo to Jackie Joyner Kersee?,sisterinlaw,florence griffithjoyner also known as flojo was married to al joyner who is the brother of jackie joynerkersee,0.83,False,False
-How long was swimmer Michelle Smith-de Bruin banned for attempting to manipulate a drugs test?,4 years,4 years,0.62,True,False
-Yuan Yuan was caught carrying drugs for which Chinese team?,swimming,chinese national basketball team,0.65,False,False
-Which grand slam did Pete Sampras not win in the 20th century?,french,us open,0.83,False,False
-In which events did Gert Fredriksson win six Olympic gold medals?,canoeing,1948 1952 and 1956,0.83,False,False
-"How many of his 45 races did Mike Hawthorn, a former Formula One motor racing world champion, win?",three,3,0.8,False,False
-On the Internet what is Spam?,junk mail,unsolicited commercial messages usually sent via email,0.85,False,False
-In which country did the Internet start?,usa,united states,0.83,False,False
-In which year was the Juilliard School founded in New York?,1905,1905,0.85,True,False
-"Who wrote My Life and Loves in 1926, originally banned in the US?",frank harris,frank harris,0.83,True,False
-What was Blondie's last UK No 1 of the 80s?,rapture,rapture,0.83,True,False
-"In baseball, where do the Royals come from?",kansas city,kansas city missouri,0.95,True,False
-What is the largest city in Ohio?,cleveland,columbus,0.95,False,False
-In which decade of the 20th century was Anne Bancroft born?,1930s,1930s,0.8,True,False
-The Suez Canal connects the Mediterranean Sea to which other Sea?,red sea,red sea,0.95,True,False
-Which rock star did Cindy Crawford name her first son after?,presley,presley elvis presley,0.42,True,False
-Sun Yat Sen overthrew the emperor in which country establishing a republic after 2000 years of imperial rule?,china,china,0.95,True,False
-Who designed the dress which made the most at Diana's dress auction?,victor edelstein,charles james,0.83,False,False
-Which Palestinian co-founded al Fatah in 1957?,yasser arafat,yasser arafat,0.95,True,False
-In which country was Earl Spencer's acrimonious divorce settlement heard?,south africa,england uk,0.83,False,False
-"In which North African country was Mohammed Al-Fayed, owner of Harrods department store in London, born?",egypt,egypt,0.83,True,False
-Aung San Suu Kyi is a controversial leader in which country?,myanmar,myanmar burma,0.95,True,False
-Which of the founders of United Artists had the last name nearest the beginning of the alphabet?,chaplin,charlie chaplin,0.8,True,False
-"In La Cage Aux Folles, what was La Cage Aux Folles?",nightclub,a drag club in sainttropez,0.83,False,False
-Where was the Fiddler in the musical's title?,on the roof,on the roof,0.83,True,False
-South Pacific was set during which war?,wwii,world war ii,0.85,False,False
-What percentage of the earth's surface is covered by Europe?,8,about 10,0.65,False,False
-Which European town gave its name to a Treaty which symbolizes closer economic links between European countries?,maastricht,maastricht,0.83,True,False
-Which home of champagne in France was also where the German High Command surrendered in WWII?,reims,the ritz hotel in paris did not receive the surrender but the allied commission accepted it at the supreme headquarters allied expeditionary force shaef in reims and general dwight d eisenhower accepted it at the supreme headquarters allied expeditionary force shaef in reims,0.67,True,False
-Which was the first European city this century to open an underground railway system?,paris,london in 1890,0.95,False,False
-Who first drew Mickey Mouse when ?Disney first supplied the voice?,ub iwerks,walt disney and ub iwerks in 1928,0.85,True,False
-Which actress wrote the novel The Last of the Really Great Whangdoodles?,julie andrews,joyce carol oates,0.8,False,False
-Who was the star of the film based on the record Harper Valley PTA by Jeannie C Riley?,barbara eden,sharon stone,0.57,False,False
-What color golf balls are used on the golf course in Antarctica?,orange,white,0.95,False,False
-Throughout the 80s and 90s Phil Collins recorded on which record label?,atlantic,atlantic records,0.83,True,False
-On which label did Chuck Berry record in the 1950s and 1960s?,chess,chess records,0.83,True,False
-What was the name of Michael Jackson's second wife?,debbie rowe,none as michael jackson did not have a second wife,0.95,False,False
-Which US city was named after a British Prime Minister?,pittsburgh,london but more specifically birmingham is also named after a british prime minister however the most notable one is likely london which is actually named after the city in england not directly after a prime minister but the uks capital has strong ties to the british pms and another us city that was indeed named after a british prime minister is birmingham alabama,0.43,False,False
-"""Who said, To err is human but it feels divine?""""""",mae west,voltaire,0.83,False,False
-Which singer had a big 60s No 1 with Roses Are Red?,bobby vinton,tom jones,0.83,False,False
-What are the international registration letters of a vehicle from Iceland?,is,ic,0.95,False,False
-Where was the American venue of the Live Aid concert?,philadelphia,john f kennedy stadium in philadelphia pennsylvania,0.95,True,False
-Which was the longest moon landing?,apollo 17,apollo 17,0.87,True,False
-Who had the most expensive presidential inauguration ceremony of the 20th century?,george w bush,john f kennedys inauguration in 1961,0.83,False,False
-Who became Israel's head of state in 1993?,ezer weizman,ezer weizman,0.83,True,False
-"In WWII, who was the head of the Nazi party's security service?",reinhard heidrich,heinrich himmler,0.95,False,False
-Which President of the Philippines was deposed in 1986?,marcos,ferdinand marcos,0.95,True,False
-"What kind of disaster claimed some 100,000 lives in Armenia in 1988?",earthquake,earthquake,0.95,True,False
-Which state on the Gulf of Mexico is nearest the end of the alphabet?,texas,texas,0.83,True,False
-Truax Field international airport is in which US state?,wisconsin,wisconsin,0.65,True,False
-In what month was the attack on Pearl Harbor?,december,december,0.95,True,False
-Who did Dr. Crippen murder?,his wife,dr hawley harvey crippens wife cora was murdered by him in 1910,0.95,False,False
-"In the 1904 Olympics, how many of the 23 track and field titles were won by Americans?",21,12,0.8,False,False
-The Black Hills lie between which two rivers?,belle fourche and cheyenne,cheyenne river and belle fourche river,0.95,False,False
+Who was the man behind The Chipmunks?,David Seville,Ross Bagdasarian Sr.,0.85,True,False
+Which Lloyd Webber musical premiered in the US on 10th December 1993?,Sunset Boulevard,Sunset Boulevard,0.83,True,False
+Who was the next British Prime Minister after Arthur Balfour?,Campbell-Bannerman,Henry Campbell-Bannerman,0.83,True,False
+Who had a 70s No 1 hit with Kiss You All Over?,Exile,Exile,0.83,True,False
+What claimed the life of singer Kathleen Ferrier?,Cancer,Breast cancer,0.83,True,False
+Rita Coolidge sang the title song for which Bond film?,Octopussy,Octopussy,0.57,True,False
+What was the last US state to reintroduce alcohol after prohibition?,Utah,Missouri,0.83,False,False
+Which actress was voted Miss Greenwich Village in 1942?,Lauren Bacall,Claudia Barrett,0.6,False,False
+What is the Japanese share index called?,Nikkei,Nikkei,0.85,True,False
+What was the name of Michael Jackson's autobiography written in 1988?,Moonwalk,Moonwalk,0.68,True,False
+In which decade did stereo records first go on sale?,1930s,1958,0.83,False,False
+In what year's Olympics were electric timing devices and a public-address system used for the first time?,"In 1912, in Stockholm",1936,0.83,False,False
+Which volcano in Tanzania is the highest mountain in Africa?,Kilimanjaro,Mount Kilimanjaro,0.95,True,False
+The flag of Libya is a plain rectangle of which color?,Green,Red,0.8,False,False
+Of which African country is Niamey the capital?,Niger,Niger,0.85,True,False
+Who was the director of the CIA from 1976-81?,George Bush,Stansfield Turner,0.83,False,False
+Which musical featured the song The Street Where You Live?,My Fair Lady,My Fair Lady,0.83,True,False
+"""Who was the target of the failed """"Bomb Plot"""" of 1944?""",Hitler,Adolf Hitler,0.83,True,False
+Who had an 80s No 1 hit with Hold On To The Nights?,Richard Marx,"Dennis Locorriere was not the artist, it was actually Richard Marx and also Dennis Locorriere is a member of Dr Hook & The Medicine Show but he did have a solo album. However, the 80s No 1 hit with 'Hold On to the Nights' is by Richard Marx.",0.67,True,False
+Who directed the classic 30s western Stagecoach?,John Ford,John Ford,0.95,True,False
+Dave Gilmore and Roger Waters were in which rock group?,Pink Floyd,Pink Floyd,0.95,True,False
+Which highway was Revisited in a classic 60s album by Bob Dylan?,61,Highway 61,0.83,True,False
+Which was the only eastern bloc country to participate in the 1984 LA Olympics?,Rumania,Romania,0.83,True,False
+Which 90s sci fi series with James Belushi was based on Bruce Wagner's comic strip of the same name?,Wild Palms,Wild Palms,0.73,True,False
+If I Were A Rich Man Was a big hit from which stage show?,Fiddler on the Roof,Fiddler on the Roof,0.95,True,False
+Men Against the Sea and Pitcairn's Island were two sequels to what famous novel?,Mutiny On The Bounty,Mutiny on the Bounty,0.85,True,False
+What was Truman Capote's last name before he was adopted by his stepfather?,Persons,Capote,0.8,False,False
+"In Lewis Carroll's poem The Hunting of the Snark, what did the elusive, troublesome snark turn into to fool hunters?",A boojum,a Boojum,0.83,True,False
+"In the Bible, who did the sun and moon stand still before?",Joshua,Joshua,0.95,True,False
+What Michelle Pfeiffer movie got a boost from the Coolio song Gangsta's Paradise?,Dangerous Minds,Dangerous Minds,0.87,True,False
+What was President Gerald Ford's middle name?,Rudolph,Gerald Rudolph Ford Jr.,0.95,True,False
+Art Garfunkel trained for which profession although he didn't qualify?,Architect,medicine,0.83,False,False
+Who was the last inmate of Spandau jail in Berlin?,Rudolf Hess,Günter Guillaume,0.92,False,False
+What was Eddie Murphy's first movie?,48 Hours,48 Hrs.,0.85,True,False
+In the 80s who wrote the novel Empire of The Sun?,J. G. Ballard,J.G. Ballard,0.83,True,False
+Kagoshima international airport is in which country?,Japan,Japan,0.95,True,False
+In which sport could the Pacers take on the Pistons?,A: Basketball,Basketball,0.83,True,False
+Kim Carnes' nine weeks at No 1 with Bette Davis Eyes was interrupted for one week by which song?,Stars on 45 medley,Angel Is a Madman,0.75,False,False
+Where in Canada is the Lion's Gate bridge?,Vancouver,"Vancouver, British Columbia",0.83,True,False
+What was Walter Matthau's first movie?,The Kentuckian,Battle Hymn (1957),0.83,False,False
+Otis Barton was a pioneer in exploring where?,Underwater,"underwater caves and the deepest parts of the ocean, particularly the Mariana Trench",0.83,True,False
+Where in England was actor Nigel Hawthorne born?,Coventry,Essex,0.83,False,False
+"What mythological beast has the head of a man, the body of a lion, and the tail and feet of a dragon?",A manticore,Lindworm,0.83,False,False
+"In Greek mythology, who were Arges, Brontes and Steropes?",Cyclopes,"The Cyclopes, three one-eyed giants.",0.83,True,False
+Which musician founded the Red Hot Peppers?,Jelly Roll Morton,"Anthony Kiedis, Flea, Chad Smith, and John Frusciante are the members of the band, but Anthony Kiedis is often considered the frontman.",0.67,False,False
+Where did the Shinning Path terrorists operate?,Peru,Peru,0.83,True,False
+How old was Jimi Hendrix when he died?,27,27,0.83,True,False
+Which Brit broke the land speed record in 1990 in Thrust 2?,Richard Noble,Richard Noble,0.83,True,False
+In which state was Gene Vincent born?,Virginia,Virginia,0.83,True,False
+How was the European Recovery Program in the 1940s more commonly known?,Marshall Plan,Marshall Plan,0.85,True,False
+Brandon Lee died during the making of which movie?,The Crow,The Crow,0.95,True,False
+Who had a 70s No 1 hit with Let's Do It Again?,The Staple Singers,The Staple Singers,0.83,True,False
+Who had a Too Legit To Quit Tour?,MC Hammer,MC Hammer,0.95,True,False
+"""According to Rudyard Kipling what were the """"two imposters"""" to meet and treat the same day?""",Triumph and Disaster,Good and Evil,0.85,False,False
+Who is the most successful UK solo artist in the USA?,Elton John,Elton John,0.85,True,False
+Which country does the airline TAAG come from?,Angola,Angola,0.8,True,False
+Which US No 1 single came from Diana Ross's platinum album Diana?,Upside Down,Ain't No Mountain High Enough,0.83,False,False
+River Phoenix died during the making of which movie?,Dark Blood,Dark Blood,0.83,True,False
+Which artist David was born in Bradford UK?,Hockney,David Hockney,0.83,True,False
+What is Mel Gibson's middle name?,Columcille,Kevin,0.5,False,False
+Richard Daley was mayor of which city for 21 years?,Chicago,Chicago,0.85,True,False
+"""In which movie did Garbo say, """"I want to be alone"""".""",Grand Hotel,Grand Hotel (1932),0.95,True,False
+What is Osbert Lancaster best known for producing?,Cartoons,cartoons and humorous books,0.75,True,False
+Who was the defending champion when Martina Navratilova first won Wimbledon singles?,Virginia Wade,Chris Evert,0.83,False,False
+Who was the first US-born winner of golf's British Open?,Walter Hagen,Richard S. Tufts,0.85,False,False
+In which country is the Sky Train Rail bridge?,Canada,Norway,0.82,False,False
+What was the Paramount Film Company originally called?,Famous Players Film Company,Adolph Zukor's Famous Players Film Company,0.83,True,False
+Who was the first person after Scott to reach the South Pole overland?,Edmond Hillary,Roald Amundsen,0.93,False,False
+Which journalist first told the world about the My Lai massacre?,Seymour Hersh,Seymour Hersh,0.8,True,False
+What is the name of Terence and Shirley Conran's dress designer son?,Jasper,Tim Conran,0.8,False,False
+Which drink did The Spice Girls promote?,Pepsi,Ziggy (a type of fruit smoothie),0.5,False,False
+Who was the youngest brother in the Beach Boys?,Carl Wilson,Carl Wilson,0.83,True,False
+Who first hosted Family Feud?,Richard Dawson,Richard Dawson,0.83,True,False
+What did the Lone Ranger's title Kemo Sabe mean in Apache?,White Shirt,My friend,0.83,False,False
+Who or what was Gentle Ben in the 60s TV series?,Bear cub,"a monkey named Gentle Ben, who befriends a young boy",0.83,False,False
+Which 70s show was based on the British show Till Death Us Do Part?,All In The Family,All in the Family,0.83,True,False
+On what date in 1969 did Neil Armstrong first set foot on the Moon?,July 20th,"July 20, 1969",0.95,True,False
+Bandar Seri Begawan International airport is in which country?,Brunei,Brunei,0.83,True,False
+What was the profession of Paul Strand (1890 - 1976)?,Photographer,Photographer,0.85,True,False
+Who had a 60s No 1 with Downtown?,Petula Clark,Petula Clark,0.85,True,False
+"Who was born first, Kiefer Sutherland or Christian Slater?",Kiefer Sutherland,Kiefer Sutherland,0.78,True,False
+"To the nearest two, how many tennis Grand Slam titles did Jimmy Connors win?",10,8,0.8,False,False
+Who was the Georgia Peach?,Ty Cobb,Ty Cobb,0.85,True,False
+Who set fire to his guitar at the Monterey Pop festival in 19676?,Jimi Hendrix,Jimi Hendrix,0.95,True,False
+Della Street was whose secretary?,Perry Mason,Perry Mason's,0.85,True,False
+"In music, who was Sweet and Innocent and Too Young?",Donny Osmond,Connie Francis,0.83,False,False
+Who is featured on Puff Daddy's Can't Hold Me Down?,Mase,"Jimmy Page and Jimmy Buffett are not, but Jay-Z is featured on the remix of 'Can't Nobody Hold Me Down' by Puff Daddy",0.67,False,False
+What had Edmond Hillary worked at before taking up mountain climbing?,Bee Keeping,Royal New Zealand Air Force,0.83,False,False
+In which American state is the Isabella Stewart Gardner Museum?,Massachusetts,Massachusetts,0.85,True,False
+Benina international airport is in which country?,Libya,Libya,0.85,True,False
+Beloved in 1999 was whose first movie since The Color Purple in 1985?,Oprah Winfrey,Whoopi Goldberg,0.83,False,False
+Which Star Trek star directed Three Men and a Baby?,Leonard Nimoy,Leonard Nimoy,0.6,True,False
+Which sitcom star appeared on the big screening The Object of My Affection?,Jennifer Aniston,Jennifer Aniston,0.57,True,False
+"""Which character did Julia """"Roberts play in Steven Spielberg's Hook?""",Tinkerbell,Tinker Bell,0.65,True,False
+Which US president did Anthony Hopkins play in a film whose title was simply his name?,Nixon,Nixon,0.95,True,False
+Which movie was a biopic about the life of David Helfgott?,Shine,Shine,0.95,True,False
+Which film director guested as the FBI Director in The Silence of the Lambs?,Roger Corman,Jonathan Demme,0.95,False,False
+In which sci fi classic did the space ship Nostromo first appear?,Alien,Alien (1979),0.87,True,False
+Nigel Hawthorne was Oscar nominated for The Madness of which King?,George,George III,0.87,True,False
+Which Swedish actress won the Best Supporting Actress Oscar for Murder on the Orient Express?,Ingrid Bergman,Ingrid Bergman,0.95,True,False
+Which Oscar-nominated film had You Sexy Thing as its theme song?,The Full Monty,Scott Pilgrim vs. the World,0.85,False,False
+Which Joan's career revived in Whatever Happened to Baby Jane?,Crawford,Bette Davis,0.95,False,False
+Which much-loved actor won the Best Actor Oscar for The Philadelphia Story?,James Stewart,James Stewart,0.83,True,False
+Which legendary dancer was Oscar-nominated for The Towering Inferno?,Fred Astaire,Fred Astaire,0.83,True,False
+What was the name of the brothel in The Best Little Whorehouse in Texas?,Chicken Ranch,Miss Mona's Brothel,0.8,False,False
+Who was the male star of the movie The Man of La Mancha?,Peter O'Toole,Peter O'Toole,0.85,True,False
+What relation is Joey Richardson to Vanessa Redgrave?,Daughter,"Vanessa Redgrave's sister-in-law, through her marriage to Corin Redgrave and his brother's marriage to Lynn Parker, who was married to John Dutton (brother of Vanessa's husband Corin's first wife).",0.67,False,False
+Melanie Molitor is the mom of which tennis world NO 1?,Martina Hingis,Martina Hingis,0.85,True,False
+Marc Dutroux hit the headlines over a 'house of horrors' in which country?,Belgium,Belgium,0.85,True,False
+On which date in 1945 did Hitler take cyanide then shoot himself?,April 30th,"April 30, 1945",0.95,True,False
+In which river is the Boulder Dam?,Colorado,Colorado River,0.87,True,False
+"Which sports event was first held at Worcester, Massachusetts in 1927?",Ryder Cup,The Freedom Trail Marathon,0.43,False,False
+In which European city is the Belvederen Gallery?,Vienna,"Vatican City, Rome",0.83,False,False
+How old was Woody Herman when he founded his own orchestra?,13,Woody Herman was 25 years old when he founded his own orchestra.,0.6,False,False
+For which movie did Katharine Hepburn win her second Oscar?,Guess Who's Coming To Dinner,Guess Who's Coming to Dinner (1967),0.58,True,False
+Who had a 60s No 1 hit with This Diamond Ring?,Gary Lewis and the Playboys,Gary Lewis & the Playboys,0.83,True,False
+The world was first aware of the Chernobyl disaster after detectors were triggered at a nuclear plant in which country?,Sweden,Ukraine,0.83,False,False
+In which country was the first permanent bungee jumping site situated?,New Zealand,New Zealand,0.83,True,False
+Who succeeded Brezhnev as Soviet premier?,Andropov,Yuri Andropov,0.85,True,False
+In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small chldren?,Baby Buggy,the safety pin,0.83,False,False
+In which city's shipyard was Solidarity set up?,"Gdansk, Poland",Gdańsk,0.83,True,False
+Which female singer was born on exactly the same day as impressionist Rich Little?,Tina Turner,Shirley Bassey,0.5,False,False
+What is Harrison Ford's real name?,Harrison Ford,Alan Wilmar Franklin Ford,0.8,False,False
+Who's home runs record did Mark McGwire break in the 1998 season?,Roger Maris,"Roger Maris' record of 61 home runs per season, which was set in 1961.",0.83,True,False
+Who won baseball's first World Series of the 80s?,Philadelphia Phillies,Philadelphia Phillies,0.85,True,False
+What was Pete Sampras seeded when he won his first US Open?,12,1,0.7,True,False
+"""Which boxer famously said,"""" If I can't beat this bum take my name off the record books?""""""",Rocky Marciano,Muhammad Ali,0.85,False,False
+Where did Jonathan Edwards set his 1995 triple jump world record?,Sweden,"Göteborg, Sweden",0.5,True,False
+"In baseball, where do the Orioles come from?",Baltimore,"Baltimore, Maryland",0.95,True,False
+The Naismith Award is presented in which sport?,Basket ball,College Basketball,0.83,False,False
+Which cartoon and film character is the nickname of super athlete Michael Johnson?,Superman,The Road Runner,0.57,False,False
+For which team did Babe Ruth blast his last Major League home run?,Boston Braves,Boston Red Sox,0.85,False,False
+What was Warren Beatty's first movie?,Splendor in the Grass,All Fall Down (1956),0.85,False,False
+"Which future Hollywood star got her break as Wonder Girl, Wonder Woman's sister Drusilla?",Debra Winger,Zoe Saldana,0.57,False,False
+Mickey Braddock in the 50s series Circus Boy found fame with which surname in which pop band?,Mickey Dolenz (The Monkees),Morrissey,0.85,False,False
+Which war veteran was Director of News & Special Events for ABC before find fame as a TV cop?,Tom Selleck,O.J. Simpson,0.83,False,False
+What US sitcom was the first exported to Britain?,Amos 'N' Andy,"Fawlty Towers is often credited as being one of the first, but actually it was I Love Lucy's spin-off 'The Lucy Show' wasn't a direct export, however other sources suggest that 'I Love Lucy' itself was re-exported in the UK from Canada.",0.4,False,False
+In Hanna and Barbera's TV cartoons base on The Addams Family who was the voice of Gomez?,John Astin,John Astin,0.83,True,False
+Who was the only female victim to be killed off in the opening credit sequence in Police Squad?,Florence Henderson,Eileen Brennan,0.95,False,False
+Which US president won the Nobel Peace Prize in 1920?,Woodrow Wilson,Warren G. Harding,0.5,False,False
+Who beat Tim Henman in his first Wimbledon singles semifinal?,Pete Sampras,Pete Sampras,0.8,True,False
+What relation was Flo Jo to Jackie Joyner Kersee?,Sister-in-law,"Florence Griffith-Joyner, also known as 'Flo-Jo', was the wife of Al Joyner, who is the brother of Jackie Joyner-Kersee.",0.83,True,False
+How long was swimmer Michelle Smith-de Bruin banned for attempting to manipulate a drugs test?,4 years,2 years,0.5,False,False
+Yuan Yuan was caught carrying drugs for which Chinese team?,Swimming,Chinese national basketball team,0.6,False,False
+Which grand slam did Pete Sampras not win in the 20th century?,French,US Open,0.83,False,False
+In which events did Gert Fredriksson win six Olympic gold medals?,Canoeing,Canoing,0.8,False,False
+"How many of his 45 races did Mike Hawthorn, a former Formula One motor racing world champion, win?",Three,1,0.8,False,False
+On the Internet what is Spam?,Junk mail,"Unsolicited, unwanted or junk e-mail.",0.85,True,False
+In which country did the Internet start?,USA,United States,0.83,True,False
+In which year was the Juilliard School founded in New York?,1905,1905,0.95,True,False
+"Who wrote My Life and Loves in 1926, originally banned in the US?",Frank Harris,Frank Harris,0.83,True,False
+What was Blondie's last UK No 1 of the 80s?,Rapture,Rapture,0.83,True,False
+"In baseball, where do the Royals come from?",Kansas city,Kansas City,0.95,True,False
+What is the largest city in Ohio?,Cleveland,Columbus,0.95,False,False
+In which decade of the 20th century was Anne Bancroft born?,1930s,The 1930s,0.83,True,False
+The Suez Canal connects the Mediterranean Sea to which other Sea?,Red sea,Red Sea,0.95,True,False
+Which rock star did Cindy Crawford name her first son after?,Presley,Presley,0.57,True,False
+Sun Yat Sen overthrew the emperor in which country establishing a republic after 2000 years of imperial rule?,China,China,0.87,True,False
+Who designed the dress which made the most at Diana's dress auction?,Victor Edelstein,John Galliano,0.6,False,False
+Which Palestinian co-founded al Fatah in 1957?,Yasser Arafat,Yasser Arafat,0.95,True,False
+In which country was Earl Spencer's acrimonious divorce settlement heard?,South Africa,England,0.83,False,False
+"In which North African country was Mohammed Al-Fayed, owner of Harrods department store in London, born?",Egypt,Egypt,0.83,True,False
+Aung San Suu Kyi is a controversial leader in which country?,Myanmar,Myanmar (Burma),0.85,True,False
+Which of the founders of United Artists had the last name nearest the beginning of the alphabet?,Chaplin,Charlie Chaplin,0.83,True,False
+"In La Cage Aux Folles, what was La Cage Aux Folles?",Nightclub,A drag club in Saint-Tropez,0.83,True,False
+Where was the Fiddler in the musical's title?,On the Roof,on the roof,0.83,True,False
+South Pacific was set during which war?,WWII,World War II,0.83,True,False
+What percentage of the earth's surface is covered by Europe?,8%,10%,0.62,False,False
+Which European town gave its name to a Treaty which symbolizes closer economic links between European countries?,Maastricht,Maastricht,0.83,True,False
+Which home of champagne in France was also where the German High Command surrendered in WWII?,Reims,"The Ritz in Reims, but more likely it would be the Allied Supreme Headquarters' location at the Grand Hôtel de la Paix in Dijon is not correct, however the most well known place for this event was actually a railway carriage in the Forest of Compiègne.",0.67,True,False
+Which was the first European city this century to open an underground railway system?,Paris,"London, in 1890",0.83,False,False
+Who first drew Mickey Mouse when ?Disney first supplied the voice?,Ub Iwerks,Ub Iwerks in 1928,0.5,True,False
+Which actress wrote the novel The Last of the Really Great Whangdoodles?,Julie Andrews,Joyce Carol Oates,0.67,False,False
+Who was the star of the film based on the record Harper Valley PTA by Jeannie C Riley?,Barbara Eden,Shirley Jones,0.83,False,False
+What color golf balls are used on the golf course in Antarctica?,Orange,White,0.7,False,False
+Throughout the 80s and 90s Phil Collins recorded on which record label?,Atlantic,Atlantic Records,0.83,True,False
+On which label did Chuck Berry record in the 1950s and 1960s?,Chess,Chess Records,0.83,True,False
+What was the name of Michael Jackson's second wife?,Debbie Rowe,Lisa Marie Presley,0.52,False,False
+Which US city was named after a British Prime Minister?,Pittsburgh,"Washington, D.C.",0.85,False,False
+"""Who said, To err is human but it feels divine?""""""",Mae West,Voltaire,0.85,False,False
+Which singer had a big 60s No 1 with Roses Are Red?,Bobby Vinton,Tom Jones,0.83,False,False
+What are the international registration letters of a vehicle from Iceland?,IS,IS,1.0,True,False
+Where was the American venue of the Live Aid concert?,Philadelphia,"John F. Kennedy Stadium in Philadelphia, Pennsylvania.",0.85,True,False
+Which was the longest moon landing?,Apollo 17,Apollo 17,0.85,True,False
+Who had the most expensive presidential inauguration ceremony of the 20th century?,George W. Bush,John F. Kennedy,0.83,False,False
+Who became Israel's head of state in 1993?,Ezer Weizman,Ezer Weizman,0.83,True,False
+"In WWII, who was the head of the Nazi party's security service?",Reinhard Heidrich,Heinrich Himmler,0.85,False,False
+Which President of the Philippines was deposed in 1986?,Marcos,Ferdinand Marcos,0.92,True,False
+"What kind of disaster claimed some 100,000 lives in Armenia in 1988?",Earthquake,Earthquake,0.87,True,False
+Which state on the Gulf of Mexico is nearest the end of the alphabet?,Texas,Texas,0.83,True,False
+Truax Field international airport is in which US state?,Wisconsin,Wisconsin,0.85,True,False
+In what month was the attack on Pearl Harbor?,December,December,0.95,True,False
+Who did Dr. Crippen murder?,His wife,Dr. Hawley Harvey Crippen's wife Cora was murdered by him.,0.85,False,False
+"In the 1904 Olympics, how many of the 23 track and field titles were won by Americans?",21,11,0.85,False,False
+The Black Hills lie between which two rivers?,Belle Fourche and Cheyenne,Cheyenne River and Belle Fourche River,0.85,True,False
 In what year was the first in-flight movie shown on an internal flight in the USA.,1929,1939,0.83,False,False
-In which city was John Lennon murdered?,new york,liverpool but he was actually shot in new york city,0.45,True,False
-How was President Kennedy assassinated?,shot,president kennedy was assassinated by lee harvey oswald on november 22 1963 in dallas texas,0.95,False,False
-Which caped crusader operated in Gotham City?,batman,batman,0.95,True,False
-Who did Jack Ruby shoot in November 1963?,lee harvey oswald,lee harvey oswald,0.95,True,False
+In which city was John Lennon murdered?,New York,"Liverpool's sister city, Hamburg, or New York City (but most likely New York City)",0.64,True,False
+How was President Kennedy assassinated?,Shot,"President Kennedy was shot by Lee Harvey Oswald on November 22, 1963, in Dallas, Texas.",0.95,True,False
+Which caped crusader operated in Gotham City?,Batman,Batman,0.95,True,False
+Who did Jack Ruby shoot in November 1963?,Lee Harvey Oswald,Lee Harvey Oswald,0.95,True,False

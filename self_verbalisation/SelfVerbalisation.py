@@ -93,96 +93,96 @@ Return ONLY valid JSON:
 
 Question: {question}
 """
+#in a main because otherwise it runs the  whole thing when I import didnt know tha pretty cool
+if __name__ == "__main__":
+    dataset = load_dataset("trivia_qa", "rc.nocontext", split="validation[:200]")
 
+    results = []
+    correct_count = 0
+    total = len(dataset)
 
-dataset = load_dataset("trivia_qa", "rc.nocontext", split="validation[:200]")
+    for i, item in enumerate(dataset):
+        question = item["question"]
+        ground_truth = str(item["answer"]["value"]).strip()
 
-results = []
-correct_count = 0
-total = len(dataset)
+        print("\n====================")
+        print(f"Question {i+1}: {question}")
+        print("Ground truth:", ground_truth)
 
-for i, item in enumerate(dataset):
-    question = item["question"]
-    ground_truth = str(item["answer"]["value"]).strip()
+        
+        answer_data = parse_json(ask_model(build_answer_prompt(question), temperature=0.5))
 
-    print("\n====================")
-    print(f"Question {i+1}: {question}")
-    print("Ground truth:", ground_truth)
+        if not answer_data:
+            print("Failed to parse answer JSON")
+            results.append({
+                "question": question,
+                "ground_truth": ground_truth,
+                "model_answer": "",
+                "confidence": 0,
+                "is_correct": False,
+                "parse_failed": True
+            })
+            continue
 
-    
-    answer_data = parse_json(ask_model(build_answer_prompt(question), temperature=0.5))
+        model_answer = str(answer_data.get("answer", "")).strip()
+        confidence = answer_data.get("confidence", 0)
 
-    if not answer_data:
-        print("Failed to parse answer JSON")
+        try:
+            confidence = float(confidence)
+        except:
+            confidence = 0.0
+
+        confidence = max(0.0, min(1.0, confidence))
+        correct = checkCorrect(model_answer, ground_truth, question)
+
+        if correct:
+            correct_count += 1
+
+        print("Model answer:", model_answer)
+        print("Confidence:", confidence)
+        print("Correct" if correct else "Incorrect")
+
         results.append({
             "question": question,
             "ground_truth": ground_truth,
-            "model_answer": "",
-            "confidence": 0,
-            "is_correct": False,
-            "parse_failed": True
+            "model_answer": model_answer,
+            "confidence": confidence,
+            "is_correct": correct,
+            "parse_failed": False
         })
-        continue
 
-    model_answer = str(answer_data.get("answer", "")).strip()
-    confidence = answer_data.get("confidence", 0)
+    df = pd.DataFrame(results)
+    df.to_csv("trivia_self_confidence_results.csv", index=False)
 
-    try:
-        confidence = float(confidence)
-    except:
-        confidence = 0.0
-
-    confidence = max(0.0, min(1.0, confidence))
-    correct = checkCorrect(model_answer, ground_truth, question)
-
-    if correct:
-        correct_count += 1
-
-    print("Model answer:", model_answer)
-    print("Confidence:", confidence)
-    print("Correct" if correct else "Incorrect")
-
-    results.append({
-        "question": question,
-        "ground_truth": ground_truth,
-        "model_answer": model_answer,
-        "confidence": confidence,
-        "is_correct": correct,
-        "parse_failed": False
-    })
-
-df = pd.DataFrame(results)
-df.to_csv("trivia_self_confidence_results.csv", index=False)
-
-print("\n====================")
-print(f"Final Score: {correct_count}/{total}")
-print(f"Accuracy: {correct_count / total * 100:.2f}%")
-print("Saved to trivia_self_confidence_results.csv")
+    print("\n====================")
+    print(f"Final Score: {correct_count}/{total}")
+    print(f"Accuracy: {correct_count / total * 100:.2f}%")
+    print("Saved to trivia_self_confidence_results.csv")
 
 
 
 
-#HE
-# ----------------------------
-# Plot CONFIDENCE distribution
-# ----------------------------
-fig, ax = plt.subplots(figsize=(8, 5))
+    #HE
+    # ----------------------------
+    # Plot CONFIDENCE distribution
+    # ----------------------------
+    fig, ax = plt.subplots(figsize=(8, 5))
 
-df[df["is_correct"]]["confidence"].hist(
-    bins=20, alpha=0.6, label="Correct", ax=ax
-)
+    df[df["is_correct"]]["confidence"].hist(
+        bins=20, alpha=0.6, label="Correct", ax=ax
+    )
 
-df[~df["is_correct"]]["confidence"].hist(
-    bins=20, alpha=0.6, label="Incorrect", ax=ax
-)
+    df[~df["is_correct"]]["confidence"].hist(
+        bins=20, alpha=0.6, label="Incorrect", ax=ax
+    )
 
-ax.set_xlabel("Confidence Score")
-ax.set_ylabel("Count")
-ax.set_title("Self-Verbalised Confidence Distribution")
-ax.legend()
+    ax.set_xlabel("Confidence Score")
+    ax.set_ylabel("Count")
+    ax.set_title("Self-Verbalised Confidence Distribution")
+    ax.legend()
 
-plt.tight_layout()
-plt.savefig("trivia_confidence_distribution.png")
-plt.show()
+    plt.tight_layout()
+    plt.savefig("trivia_confidence_distribution.png")
+    plt.show()
 
-print("Plot saved to trivia_confidence_distribution.png")
+    print("Plot saved to trivia_confidence_distribution.png")

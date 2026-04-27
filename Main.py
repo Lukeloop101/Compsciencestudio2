@@ -8,8 +8,7 @@ from self_verbalisation.SelfVerbalisation import (
     ask_model,
     build_answer_prompt,
     parse_json,
-    clean,
-    is_match
+    checkCorrect
 )
 
 
@@ -101,7 +100,7 @@ for i, item in enumerate(questions, start=1):
     answer_raw = ask_model(build_answer_prompt(question), temperature=0.5)
     answer_data = parse_json(answer_raw)
     
-    model_answer = clean(answer_data.get("answer", ""))
+    model_answer = answer_data.get("answer", "").strip()
     confidence = answer_data.get("confidence", 0)
     
     resultsSelf.append({
@@ -130,9 +129,9 @@ for i, item in enumerate(questions, start=1):
     #so we are checking if the answers are correcct 
     
     #what I need is each of the answers
-    answerSelf = clean(answer_data.get("answer", "")) 
-    answerToken = clean(resultFromToken.get("generated_answer", ""))
-    answerConsistency = clean(resultsCons.get("most_common_answer", ""))
+    answerSelf = answer_data.get("answer", "")
+    answerToken = resultFromToken.get("generated_answer", "")
+    answerConsistency = resultsCons.get("most_common_answer", "")
     
     #scores somewhere above but the names weres
     #tokenConfidence 
@@ -146,30 +145,30 @@ for i, item in enumerate(questions, start=1):
     #bad solution using only one of the answers as the conbinedAnswer
     if (askModel(make3Prompt(answerToken, answerConsistency, answerSelf))):
         combinedScore = (0.3 * consistencyConfidence +0.3 *selfConfidence +0.4* tokenConfidence)
-        print("using all 3: ", combinedScore)
+        print("using all 3: ", combinedScore, answerSelf, answerToken, answerConsistency)
         #Use conistency as least chance to be carrying on
-        combindedAnswer = clean(resultsCons.get("most_common_answer", ""))
+        combindedAnswer = resultsCons.get("most_common_answer", "")
         combinedIsTrue = resultsCons.get("is_correct")
     elif (askModel(make2Prompt(answerToken, answerConsistency))):
         combinedScore = 0.3 * consistencyConfidence + 0.4 * tokenConfidence
         print("using Token and Consistency: ", combinedScore)
-        combindedAnswer = clean(resultsCons.get("most_common_answer", ""))
+        combindedAnswer = resultsCons.get("most_common_answer", "")
         combinedIsTrue = resultsCons.get("is_correct")
     elif (askModel(make2Prompt(answerSelf, answerConsistency))):
         combinedScore = 0.4 * consistencyConfidence + 0.3 * selfConfidence
         print("using Self and Consistency: ", combinedScore)
-        combindedAnswer = clean(resultsCons.get("most_common_answer", ""))
+        combindedAnswer = resultsCons.get("most_common_answer", "")
         combinedIsTrue = resultsCons.get("is_correct")
     elif (askModel(make2Prompt(answerSelf, answerToken))):
         combinedScore = 0.3 * selfConfidence + 0.4 * tokenConfidence
         print("using Self and Token: ", combinedScore)
         combindedAnswer = resultFromToken.get("generated_answer")
-        combinedIsTrue = is_match(answerToken, clean(answer))
+        combinedIsTrue = checkCorrect(answerToken, answer, question)
     else:#I dont care we just using token Im not dealing with more 
         #if someone does want to do right I assume you choose the one with the highest confidence score
         combinedScore =  0.4 * tokenConfidence
         combindedAnswer = resultFromToken.get("generated_answer")
-        combinedIsTrue = is_match(answerToken, clean(answer))
+        combinedIsTrue = checkCorrect(answerToken, answer, question)
         print("using just one: ", combinedScore)
     
     

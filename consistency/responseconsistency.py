@@ -1,5 +1,5 @@
 from openai import OpenAI
-from config import MODEL_NAME, BASE_URL, API_KEY
+from consistency.config import MODEL_NAME, BASE_URL, API_KEY
 import re
 from collections import Counter
 

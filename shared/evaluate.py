@@ -1,9 +1,17 @@
-from responseconsistency import analyse_question
+
 import matplotlib.pyplot as plt
 import numpy as np
 from datasets import load_dataset
-from scorer import get_token_prob_score
+from consistency.responseconsistency import analyse_question
+from token_probability.scorer import get_token_prob_score
 
+from self_verbalisation.SelfVerbalisation import (
+    ask_model,
+    build_answer_prompt,
+    parse_json,
+    clean,
+    is_match
+)
 
 
 def askModel(prompt, temperature=0):
@@ -48,9 +56,14 @@ def make2Prompt(i, j):
 #######################
 #the actual run part
 #############
+from openai import OpenAI
 
+client = OpenAI(
+    base_url="http://localhost:11434/v1",
+    api_key="ollama"
+)
 
-
+print("testing it is running something")
 
 #my goal is first to figure out how the differnt models are answering the questions, and then to figure out how to evaluate the answers. I will start with the first part, and then move on to the second part.
 

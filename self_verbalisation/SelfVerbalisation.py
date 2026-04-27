@@ -1,4 +1,4 @@
-import json
+iimport json
 import re
 import pandas as pd
 from groq import Groq
@@ -13,16 +13,40 @@ client = OpenAI(
     api_key="ollama"
 )
 
-def clean(text):
-    if text is None:
-        return ""
-    return re.sub(r"[^\w\s]", "", str(text).strip().lower())
+def checkCorrect(ourAnswer, BaseAnswer, question):
+    #used this so it first checks if the same stole from token also saves time and technically tokens but who cares about that.
+    if (not(ourAnswer.lower().strip() == BaseAnswer.lower().strip() or ourAnswer.lower().strip() in BaseAnswer.lower().strip() or BaseAnswer.lower().strip() in ourAnswer.lower().strip())):
+        #Bro PROMPTING IS SO SPECIFIC ITS GHRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+        prompt = prompt = f"""You are checking if a model's answer is correct given a question and known correct answer.
+    Question: {question}
+    Correct Answer: {BaseAnswer}
+    Model Answer: {ourAnswer}
+
+    Return just one word: true or false."""
 
 
-def is_match(pred, gt):
-    if not pred or not gt:
-        return False
-    return pred == gt or pred in gt or gt in pred
+        response = client.chat.completions.create(
+            model="llama3.1:8b",
+            messages=[
+                {"role": "system", "content": "You compare answers. Return only true or false. No explanation."},
+                {"role": "user", "content": prompt},
+            ],
+            temperature=0
+        )
+
+        output = response.choices[0].message.content
+
+        if "true" in output.lower():
+            return True
+        elif "false" in output.lower():
+            return False
+        else:
+            return False
+    return ourAnswer.lower().strip() == BaseAnswer.lower().strip() or ourAnswer.lower().strip() in BaseAnswer.lower().strip() or BaseAnswer.lower().strip() in ourAnswer.lower().strip()
+# def is_match(pred, gt):
+#     if not pred or not gt:
+#         return False
+#     return pred == gt or pred in gt or gt in pred
 
 
 def parse_json(text):
@@ -46,21 +70,19 @@ def ask_model(prompt, temperature=0):
 
 
 def build_answer_prompt(question):
-    return f"""
-Answer the question given as well as a confidence score from 0.0 to 1.0.
-
-rules for different confidence levels:
-- 0.95 to 1.00 = only if you are certain the answer is correct
-- 0.80 to 0.94 = strong evidence, but not absolute certainty
-- 0.50 to 0.79 = plausible guess, but uncertain
+    return f"""Given the question answer it and provide a confidence score between 0.00 and 1.00
+Specific requirements for each level of confidence:
+- 0.95 to 1.00 =  You are completely sure that the answer is correct, based on multiple sources.
+- 0.80 to 0.94 = strong evidence, but  there is not complete certainty
+- 0.50 to 0.79 = There is decent evidence for the answer being correct compared to other options
 - 0.20 to 0.49 = weak guess
-- 0.00 to 0.19 = almost no confidence
+- 0.00 to 0.19 = It is practically a guess with very little evidence
 
-Important rules:
+Some extra specific rules to follow:
 - Do NOT give confidence above 0.90 unless the answer is extremely well-known and you are certain.
-- If there is any ambiguity, lower the confidence.
+- If there is any uncertainity, lower the confidence.
 - If you are guessing, confidence must be below 0.70.
-- If you are not sure, prefer a lower confidence rather than a higher one.
+- When uncertain of a answer choose a lower score over a higher answer.
 - Most of the answers confidence score should not be above 0.90.
 
 Return ONLY valid JSON:
@@ -81,14 +103,14 @@ total = len(dataset)
 
 for i, item in enumerate(dataset):
     question = item["question"]
-    ground_truth = clean(item["answer"]["value"])
+    ground_truth = str(item["answer"]["value"]).strip()
 
     print("\n====================")
     print(f"Question {i+1}: {question}")
     print("Ground truth:", ground_truth)
 
-    answer_raw = ask_model(build_answer_prompt(question), temperature=0.5)
-    answer_data = parse_json(answer_raw)
+    
+    answer_data = parse_json(ask_model(build_answer_prompt(question), temperature=0.5))
 
     if not answer_data:
         print("Failed to parse answer JSON")
@@ -102,7 +124,7 @@ for i, item in enumerate(dataset):
         })
         continue
 
-    model_answer = clean(answer_data.get("answer", ""))
+    model_answer = str(answer_data.get("answer", "")).strip()
     confidence = answer_data.get("confidence", 0)
 
     try:
@@ -111,7 +133,7 @@ for i, item in enumerate(dataset):
         confidence = 0.0
 
     confidence = max(0.0, min(1.0, confidence))
-    correct = is_match(model_answer, ground_truth)
+    correct = checkCorrect(model_answer, ground_truth, question)
 
     if correct:
         correct_count += 1

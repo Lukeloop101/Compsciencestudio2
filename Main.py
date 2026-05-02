@@ -44,11 +44,22 @@ def askModel(prompt, temperature=0):
 #     return output
 
 #two seperate as it makes life easier 
-def make3Prompt(i, j, s):
-    return f""" Check if these three answers are all the same in meaning. Answer 1 {i}. Answer 2 {j}. Answer 3{s}. Answer this question with true or false.   """
+def make3Prompt(i, j, s, Question):
+    return f""" You are checking if a model's answer is correct given a question and known correct answer.
+    Question: {Question}
+    Model Answer 1: {i}
+    Model Answer 2: {j}
+    Model Answer 3: {s}
 
-def make2Prompt(i, j):
-    return f""" Check if these two answers share the same meaning. Answer 1 {i}. Answer 2 {j}. Answer this question with true or false.   """
+    Return just one word: true or false. """
+
+def make2Prompt(i, j, Question):
+    return f""" You are checking if a model's answer is correct given a question and known correct answer.
+    Question: {Question}
+    Model Answer 1: {i}
+    Model Answer 2: {j}
+
+    Return just one word: true or false. """
 
 
 #######################
@@ -88,8 +99,8 @@ for i, item in enumerate(questions, start=1):
     question = item["question"]
     answer = item["answer"]
     aliases = item["aliases"]
-    
-    print(f"[{i + 1}/200] {question}")
+    print("\n#################################################################################")
+    print(f"[{i}/200] {question}")
     
     # This is the entire conistency for each with long output recheck
     resultsCons = analyse_question(question, answer, aliases, n=10)
@@ -143,34 +154,66 @@ for i, item in enumerate(questions, start=1):
     combindedAnswer = "Something went wrong if this is the final answer" #spelt wrong how dumb are you me
     combinedIsTrue = False
     #bad solution using only one of the answers as the conbinedAnswer
-    if (askModel(make3Prompt(answerToken, answerConsistency, answerSelf))):
+    if (askModel(make3Prompt(answerToken, answerConsistency, answerSelf, question))):
         combinedScore = (0.3 * consistencyConfidence +0.3 *selfConfidence +0.4* tokenConfidence)
-        print("using all 3: ", combinedScore, answerSelf, answerToken, answerConsistency)
+        
         #Use conistency as least chance to be carrying on
         combindedAnswer = resultsCons.get("most_common_answer", "")
         combinedIsTrue = resultsCons.get("is_correct")
-    elif (askModel(make2Prompt(answerToken, answerConsistency))):
+        print("All three were the same: ",combindedAnswer,", ", combinedScore)
+        
+    elif (askModel(make2Prompt(answerToken, answerConsistency, question))):
         combinedScore = 0.3 * consistencyConfidence + 0.4 * tokenConfidence
-        print("using Token and Consistency: ", combinedScore)
         combindedAnswer = resultsCons.get("most_common_answer", "")
         combinedIsTrue = resultsCons.get("is_correct")
-    elif (askModel(make2Prompt(answerSelf, answerConsistency))):
+        print("using Token and Consistency: ", combinedScore,", ", combinedScore)
+        
+    elif (askModel(make2Prompt(answerSelf, answerConsistency, question))):
         combinedScore = 0.4 * consistencyConfidence + 0.3 * selfConfidence
-        print("using Self and Consistency: ", combinedScore)
         combindedAnswer = resultsCons.get("most_common_answer", "")
         combinedIsTrue = resultsCons.get("is_correct")
-    elif (askModel(make2Prompt(answerSelf, answerToken))):
+        print("using Self and Consistency: ",combindedAnswer,", ", combinedScore)
+        
+    elif (askModel(make2Prompt(answerSelf, answerToken, question))):
         combinedScore = 0.3 * selfConfidence + 0.4 * tokenConfidence
-        print("using Self and Token: ", combinedScore)
         combindedAnswer = resultFromToken.get("generated_answer")
-        combinedIsTrue = checkCorrect(answerToken, answer, question)
-    else:#I dont care we just using token Im not dealing with more 
-        #if someone does want to do right I assume you choose the one with the highest confidence score
-        combinedScore =  0.4 * tokenConfidence
+        combinedIsTrue = checkCorrect(answerToken, answer, question, aliases)
+        print("using Self Verbalised and Token: ", combindedAnswer,", ", combinedScore)
+        
+        
+    #############################################################################################################
+    #SINGLE ANSWER TECHNIQUE    
+    # we just choosing the one with the highest confidence score tech token first as it has the highest weighting
+    elif tokenConfidence >= selfConfidence and tokenConfidence >= consistencyConfidence:
+        combinedScore = 0.4 * tokenConfidence
         combindedAnswer = resultFromToken.get("generated_answer")
-        combinedIsTrue = checkCorrect(answerToken, answer, question)
-        print("using just one: ", combinedScore)
-    
+        combinedIsTrue = checkCorrect(answerToken, answer, question, aliases)
+        print("Using Just Token: ", combindedAnswer,", ", combinedScore)
+        
+    elif selfConfidence >= tokenConfidence and selfConfidence >= consistencyConfidence:
+        combinedScore = 0.3 * selfConfidence
+        combindedAnswer = answer_data.get("answer", "")
+        combinedIsTrue = checkCorrect(answerSelf, answer, question, aliases)
+        print("Using Just Self Verbalisation: ", combindedAnswer,", ", combinedScore)
+        
+    #could use else probably not to worried about speed though
+    elif consistencyConfidence >= tokenConfidence and consistencyConfidence >= selfConfidence:
+        combinedScore = 0.3 * consistencyConfidence
+        combindedAnswer = resultsCons.get("most_common_answer", "") 
+        combinedIsTrue = resultsCons.get("is_correct")
+        print("Using Just Consistency: ", combindedAnswer,", ", combinedScore)
+        
+    else:
+        print("Something went wrong")
+        # else:#I dont care we just using token Im not dealing with more 
+        # #if someone does want to do right I assume you choose the one with the highest confidence score
+        # combinedScore =  0.4 * tokenConfidence
+        # combindedAnswer = resultFromToken.get("generated_answer")
+        # combinedIsTrue = checkCorrect(answerToken, answer, question)
+        # print("Using Just Token: ", combinedScore,", ", combinedScore)
+        # print("is correct: ", combinedIsTrue)
+    print("ground truth: ", answer)
+    print("is correct: ", combinedIsTrue)
     
     
     resultsCombined.append({

@@ -13,9 +13,9 @@ client = OpenAI(
     api_key="ollama"
 )
 
-def checkCorrect(ourAnswer, BaseAnswer, question):
+def checkCorrect(ourAnswer, BaseAnswer, question, aliases):
     #used this so it first checks if the same stole from token also saves time and technically tokens but who cares about that.
-    if (not(ourAnswer.lower().strip() == BaseAnswer.lower().strip() or ourAnswer.lower().strip() in BaseAnswer.lower().strip() or BaseAnswer.lower().strip() in ourAnswer.lower().strip())):
+    if (not(ourAnswer.lower().strip() == BaseAnswer.lower().strip() or ourAnswer.lower().strip() in BaseAnswer.lower().strip() or BaseAnswer.lower().strip() in ourAnswer.lower().strip() or any(ourAnswer.lower().strip() in alias.strip().lower() for alias in aliases ))):
         #Bro PROMPTING IS SO SPECIFIC ITS GHRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
         prompt = prompt = f"""You are checking if a model's answer is correct given a question and known correct answer.
     Question: {question}
@@ -42,7 +42,7 @@ def checkCorrect(ourAnswer, BaseAnswer, question):
             return False
         else:
             return False
-    return ourAnswer.lower().strip() == BaseAnswer.lower().strip() or ourAnswer.lower().strip() in BaseAnswer.lower().strip() or BaseAnswer.lower().strip() in ourAnswer.lower().strip()
+    return ourAnswer.lower().strip() == BaseAnswer.lower().strip() or ourAnswer.lower().strip() in BaseAnswer.lower().strip() or BaseAnswer.lower().strip() in ourAnswer.lower().strip() or any(ourAnswer.lower().strip() in alias.strip().lower() for alias in aliases )
 # def is_match(pred, gt):
 #     if not pred or not gt:
 #         return False
@@ -103,6 +103,7 @@ if __name__ == "__main__":
 
     for i, item in enumerate(dataset):
         question = item["question"]
+        aliases = item["answer"]["aliases"]
         ground_truth = str(item["answer"]["value"]).strip()
 
         print("\n====================")
@@ -133,7 +134,7 @@ if __name__ == "__main__":
             confidence = 0.0
 
         confidence = max(0.0, min(1.0, confidence))
-        correct = checkCorrect(model_answer, ground_truth, question)
+        correct = checkCorrect(model_answer, ground_truth, question, aliases)
 
         if correct:
             correct_count += 1

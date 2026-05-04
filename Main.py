@@ -3,6 +3,7 @@ import numpy as np
 from datasets import load_dataset
 from consistency.responseconsistency import analyse_question
 from token_probability.scorer import get_token_prob_score
+import pandas as pd
 
 from self_verbalisation.SelfVerbalisation import (
     ask_model,
@@ -166,10 +167,10 @@ for i, item in enumerate(questions, start=1):
         combinedScore = 0.3 * consistencyConfidence + 0.4 * tokenConfidence
         combindedAnswer = resultsCons.get("most_common_answer", "")
         combinedIsTrue = resultsCons.get("is_correct")
-        print("using Token and Consistency: ", combinedScore,", ", combinedScore)
+        print("using Token and Consistency: ", combindedAnswer,", ", combinedScore)
         
     elif (askModel(make2Prompt(answerSelf, answerConsistency, question))):
-        combinedScore = 0.4 * consistencyConfidence + 0.3 * selfConfidence
+        combinedScore = 0.3 * consistencyConfidence + 0.3 * selfConfidence
         combindedAnswer = resultsCons.get("most_common_answer", "")
         combinedIsTrue = resultsCons.get("is_correct")
         print("using Self and Consistency: ",combindedAnswer,", ", combinedScore)
@@ -237,8 +238,31 @@ for i, item in enumerate(questions, start=1):
     #     #final else if choosing the most highest conf
     # #Yep more else ifs Dont care Im Just setting to Token as it has the highhest weighting
     # else:
-    
-    
+# ----------------------------
+# Plot distribution from my boy chris
+# ----------------------------
+df = pd.DataFrame(resultsCombined)
+
+
+fig, ax = plt.subplots(figsize=(8, 5))
+
+df[df["combined_correct"]]["combined_score"].hist(
+    bins=20, alpha=0.6, label="Correct", ax=ax
+)
+
+df[~df["combined_correct"]]["combined_score"].hist(
+    bins=20, alpha=0.6, label="Incorrect", ax=ax
+)
+
+ax.set_xlabel("Hybrid Confidence Score")
+ax.set_ylabel("Count")
+ax.set_title("hybrid Confidence Distribution")
+ax.legend()
+
+plt.tight_layout()
+plt.savefig("CombindedConfidencedistribution.png")
+
+print("\nPlot saved to CombindedConfidencedistribution.png")
     
     
     

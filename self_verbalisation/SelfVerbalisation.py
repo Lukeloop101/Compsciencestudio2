@@ -74,8 +74,8 @@ def build_answer_prompt(question):
 Specific requirements for each level of confidence:
 - 0.95 to 1.00 =  You are completely sure that the answer is correct, based on multiple sources.
 - 0.80 to 0.94 = strong evidence, but  there is not complete certainty
-- 0.50 to 0.79 = There is decent evidence for the answer being correct compared to other options
-- 0.20 to 0.49 = weak guess
+- 0.50 to 0.79 = There is decent evidence for the answer being correct compared to other choices
+- 0.20 to 0.49 =  Weak evidence or close to becoming a guess but the answer  has some merit above others.
 - 0.00 to 0.19 = It is practically a guess with very little evidence
 
 Some extra specific rules to follow:
@@ -95,7 +95,7 @@ Question: {question}
 """
 #in a main because otherwise it runs the  whole thing when I import didnt know tha pretty cool
 if __name__ == "__main__":
-    dataset = load_dataset("trivia_qa", "rc.nocontext", split="validation[:200]")
+    dataset = load_dataset("trivia_qa", "rc.nocontext", split="validation[:3000]")
 
     results = []
     correct_count = 0

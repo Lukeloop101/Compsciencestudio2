@@ -121,7 +121,6 @@ if __name__ == "__main__":
                 "model_answer": "",
                 "confidence": 0,
                 "is_correct": False,
-                "parse_failed": True
             })
             continue
 
@@ -149,7 +148,6 @@ if __name__ == "__main__":
             "model_answer": model_answer,
             "confidence": confidence,
             "is_correct": correct,
-            "parse_failed": False
         })
 
     df = pd.DataFrame(results)

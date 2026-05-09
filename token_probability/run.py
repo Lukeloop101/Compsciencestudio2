@@ -9,46 +9,64 @@ def clean(text):
     return re.sub(r"[^\w\s]", "", text.strip().lower())
 
 
-dataset = load_dataset("trivia_qa", "rc.nocontext", split="validation[:200]")
+def is_match(pred, alias):
+    # same exact-or-substring check as before, just pulled out so we can run it
+    # against every alias without making the loop messy
+    if not alias or not pred:
+        return False
+    return pred == alias or alias in pred or pred in alias
 
+
+N = 3000
+SPLIT = f"validation[:{N}]"
+
+dataset = load_dataset("trivia_qa", "rc.nocontext", split=SPLIT)
 results = []
 
 for i, item in enumerate(dataset):
     q = item["question"]
-    ground_truth = item["answer"]["value"]
+    ans = item["answer"]
 
-    print(f"[{i + 1}/200] {q}")
+    # main ground truth, kept for the csv so the output looks like before
+    ground_truth = ans["value"]
 
+    # gather acceptable answers from all four fields trivia_qa provides.
+    # "value" and "aliases" are raw, "normalized_*" are pre-cleaned
+    aliases = set()
+    aliases.add(ans.get("value", "") or "")
+    aliases.update(ans.get("aliases", []) or [])
+    aliases.add(ans.get("normalized_value", "") or "")
+    aliases.update(ans.get("normalized_aliases", []) or [])
+
+    # clean each one the same way as the prediction so comparison is fair
+    aliases_clean = {clean(a) for a in aliases if a}
+
+    print(f"[{i + 1}/{N}] {q}")
     result = get_token_prob_score(q)
 
-    gt_clean = clean(ground_truth)
     pred_clean = clean(result["generated_answer"])
 
-    result["ground_truth"] = gt_clean
-
-    result["is_correct"] = (
-        gt_clean == pred_clean or gt_clean in pred_clean or pred_clean in gt_clean
-    )
+    # correct if it matches ANY alias - fixes the WWII vs World War Two
+    # problem we hit on the 200 run
+    result["ground_truth"] = clean(ground_truth)
+    result["num_aliases"] = len(aliases_clean)
+    result["is_correct"] = any(is_match(pred_clean, a) for a in aliases_clean)
 
     if not result["generated_answer"]:
         result["generated_answer"] = "EMPTY"
-
     results.append(result)
 
-# Save
+# save
 os.makedirs("results", exist_ok=True)
 df = pd.DataFrame(results)
-
 df["model"] = "llama3.1:8b"
-df["dataset_split"] = "validation[:200]"
-
+df["dataset_split"] = SPLIT
 df.to_csv("results/token_prob_results.csv", index=False)
+print(f"Done! Results saved to results/token_prob_results.csv ({len(df)} rows)")
 
-print("Done! Results saved to results/token_prob_results.csv")
-
-# Quick evaluation
+# quick sanity check
 print("\n--- Summary ---")
 print(df.groupby("is_correct")["uncertainty_score"].mean())
-
 print("\nCounts:")
 print(df["is_correct"].value_counts())
+print(f"\nAccuracy: {df['is_correct'].mean():.3f}")

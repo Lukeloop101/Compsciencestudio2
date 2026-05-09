@@ -221,7 +221,16 @@ for i, item in enumerate(questions, start=1):
     "question": question,
     "combined_answer": combindedAnswer,
     "combined_score": combinedScore,
-    "combined_correct": combinedIsTrue
+    "combined_correct": combinedIsTrue,
+    "self_answer": answerSelf,
+    "self_score": selfConfidence,
+    "self_correct": checkCorrect(answerSelf, answer, question, aliases),
+    "cons_answer": answerConsistency,
+    "cons_score": consistencyConfidence,
+    "cons_correct": resultsCon.get("is_correct"),
+    "token_answer": answerToken,
+    "token_score": tokenConfidence,
+    "token_correct": checkCorrect(answerToken, answer, question, aliases)
     })  
     # if resultsConsistency and confidence and resultsToken:
     #     combined_score = 0.4 * resultsConsistency + 0.3 * confidence + 0.3 * resultsToken

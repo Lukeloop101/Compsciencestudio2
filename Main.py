@@ -4,6 +4,7 @@ from datasets import load_dataset
 from consistency.responseconsistency import analyse_question
 from token_probability.scorer import get_token_prob_score
 import pandas as pd
+from sklearn.metrics import roc_auc_score
 
 from self_verbalisation.SelfVerbalisation import (
     ask_model,

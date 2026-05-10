@@ -248,32 +248,26 @@ for i, item in enumerate(questions, start=1):
     #     #final else if choosing the most highest conf
     # #Yep more else ifs Dont care Im Just setting to Token as it has the highhest weighting
     # else:
-# ----------------------------
+
 # Plot distribution from my boy chris
-# ----------------------------
+
 df = pd.DataFrame(resultsCombined)
-
-
 fig, ax = plt.subplots(figsize=(8, 5))
-
-df[df["combined_correct"]]["combined_score"].hist(
-    bins=20, alpha=0.6, label="Correct", ax=ax
-)
-
-df[~df["combined_correct"]]["combined_score"].hist(
-    bins=20, alpha=0.6, label="Incorrect", ax=ax
-)
-
+df[df["combined_correct"]]["combined_score"].hist(bins=20, alpha=0.6, label="Correct", ax=ax)
+df[~df["combined_correct"]]["combined_score"].hist(bins=20, alpha=0.6, label="Incorrect", ax=ax)
 ax.set_xlabel("Hybrid Confidence Score")
 ax.set_ylabel("Count")
 ax.set_title("hybrid Confidence Distribution")
 ax.legend()
-
 plt.tight_layout()
 plt.savefig("CombindedConfidencedistribution.png")
-
 print("\nPlot saved to CombindedConfidencedistribution.png")
-    
-    
+
+#AUROC score
+print("AUROC Scores For Everything")
+print(f"Combined: " + str(round(roc_auc_score(df['combined_correct'], df['combined_score']), 4)))
+print(f"Self: " + str(round(roc_auc_score(df['self_correct'], df['self_score']), 4)))
+print(f"Token: " + str(round(roc_auc_score(df['cons_correct'], df['cons_score']), 4)))
+print(f"Consistency: " + str(round(roc_auc_score(df['token_correct'], df['token_score']), 4)))
     
     #asking

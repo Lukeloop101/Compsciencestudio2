@@ -267,7 +267,7 @@ print("\nPlot saved to CombindedConfidencedistribution.png")
 print("AUROC Scores For Everything")
 print(f"Combined: " + str(round(roc_auc_score(df['combined_correct'], df['combined_score']), 4)))
 print(f"Self: " + str(round(roc_auc_score(df['self_correct'], df['self_score']), 4)))
-print(f"Token: " + str(round(roc_auc_score(df['cons_correct'], df['cons_score']), 4)))
-print(f"Consistency: " + str(round(roc_auc_score(df['token_correct'], df['token_score']), 4)))
+print(f"Consistency: " + str(round(roc_auc_score(df['cons_correct'], df['cons_score']), 4)))
+print(f"Token: " + str(round(roc_auc_score(df['token_correct'], df['token_score']), 4)))
     
     #asking

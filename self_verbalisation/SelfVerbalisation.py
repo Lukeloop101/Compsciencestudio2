@@ -159,29 +159,18 @@ if __name__ == "__main__":
     print("Saved to trivia_self_confidence_results.csv")
 
 
-
-
-    #HE
-    # ----------------------------
-    # Plot CONFIDENCE distribution
-    # ----------------------------
+#the graph
     fig, ax = plt.subplots(figsize=(8, 5))
-
     df[df["is_correct"]]["confidence"].hist(
         bins=20, alpha=0.6, label="Correct", ax=ax
     )
-
     df[~df["is_correct"]]["confidence"].hist(
         bins=20, alpha=0.6, label="Incorrect", ax=ax
     )
-
     ax.set_xlabel("Confidence Score")
     ax.set_ylabel("Count")
-    ax.set_title("Self-Verbalised Confidence Distribution")
+    ax.set_title("Self Verbalisation Confidence Distribution")
     ax.legend()
-
     plt.tight_layout()
-    plt.savefig("trivia_confidence_distribution.png")
-    plt.show()
-
-    print("Plot saved to trivia_confidence_distribution.png")
+    plt.savefig("results/self_distribution.png")
+    print("\nPlot saved to results/self_distribution.png")

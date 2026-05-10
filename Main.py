@@ -79,7 +79,7 @@ print("testing it is running something")
 #my goal is first to figure out how the differnt models are answering the questions, and then to figure out how to evaluate the answers. I will start with the first part, and then move on to the second part.
 
 # Keep this small at first so runtime is manageable the dataset 
-dataset = load_dataset("trivia_qa", "rc.nocontext", split="validation[:200]")    
+dataset = load_dataset("trivia_qa", "rc.nocontext", split="validation[:10]")    
 
 
 questions = []
@@ -221,14 +221,14 @@ for i, item in enumerate(questions, start=1):
     resultsCombined.append({
     "question": question,
     "combined_answer": combindedAnswer,
-    "combined_score": combinedScore,
+    "combined_score": round(float(combinedScore),2),
     "combined_correct": combinedIsTrue,
     "self_answer": answerSelf,
     "self_score": selfConfidence,
     "self_correct": checkCorrect(answerSelf, answer, question, aliases),
     "cons_answer": answerConsistency,
     "cons_score": consistencyConfidence,
-    "cons_correct": resultsCon.get("is_correct"),
+    "cons_correct": resultsCons.get("is_correct"),
     "token_answer": answerToken,
     "token_score": tokenConfidence,
     "token_correct": checkCorrect(answerToken, answer, question, aliases)

@@ -1,2 +1,2 @@
 # Compsciencestudio2
-BaD AI wrapper
+Uncertainity for AI for TrivaQA

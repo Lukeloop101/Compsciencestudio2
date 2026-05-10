@@ -1,0 +1,7 @@
+venv/
+.env
+__pycache__/
+*.pyc
+token_probability/results/
+consistency/results/
+self_verbalisation/results/

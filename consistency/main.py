@@ -4,7 +4,7 @@ import numpy as np
 from datasets import load_dataset
 
 # Keep this small at first so runtime is manageable
-dataset = load_dataset("trivia_qa", "rc.nocontext", split="validation[:200]")
+dataset = load_dataset("trivia_qa", "rc.nocontext", split="validation[:3000]")
 
 questions = []
 

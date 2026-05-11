@@ -79,7 +79,7 @@ print("testing it is running something")
 #my goal is first to figure out how the differnt models are answering the questions, and then to figure out how to evaluate the answers. I will start with the first part, and then move on to the second part.
 
 # Keep this small at first so runtime is manageable the dataset 
-dataset = load_dataset("trivia_qa", "rc.nocontext", split="validation[:10]")    
+dataset = load_dataset("trivia_qa", "rc.nocontext", split="validation[:3000]")    
 
 
 questions = []
@@ -112,7 +112,10 @@ for i, item in enumerate(questions, start=1):
     # self
     answer_raw = ask_model(build_answer_prompt(question), temperature=0.5)
     answer_data = parse_json(answer_raw)
-    
+    #lame fix but it failed so i dOING easiest fix
+    if not answer_data:
+        print("error again 117")
+        continue
     model_answer = answer_data.get("answer", "").strip()
     confidence = answer_data.get("confidence", 0)
     
@@ -156,6 +159,10 @@ for i, item in enumerate(questions, start=1):
     combindedAnswer = "Something went wrong if this is the final answer" #spelt wrong how dumb are you me
     combinedIsTrue = False
     #bad solution using only one of the answers as the conbinedAnswer
+    
+    #to help with speed as written poorly
+    selfIsTrue = checkCorrect(answerSelf, answer, question, aliases)
+    tokenIsTrue = checkCorrect(answerToken, answer, question, aliases)
     if (askModel(make3Prompt(answerToken, answerConsistency, answerSelf, question))):
         combinedScore = (0.3 * consistencyConfidence +0.3 *selfConfidence +0.4* tokenConfidence)
         
@@ -179,7 +186,7 @@ for i, item in enumerate(questions, start=1):
     elif (askModel(make2Prompt(answerSelf, answerToken, question))):
         combinedScore = 0.3 * selfConfidence + 0.4 * tokenConfidence
         combindedAnswer = resultFromToken.get("generated_answer")
-        combinedIsTrue = checkCorrect(answerToken, answer, question, aliases)
+        combinedIsTrue = tokenIsTrue
         print("using Self Verbalised and Token: ", combindedAnswer,", ", combinedScore)
         
         
@@ -189,13 +196,13 @@ for i, item in enumerate(questions, start=1):
     elif tokenConfidence >= selfConfidence and tokenConfidence >= consistencyConfidence:
         combinedScore = 0.4 * tokenConfidence
         combindedAnswer = resultFromToken.get("generated_answer")
-        combinedIsTrue = checkCorrect(answerToken, answer, question, aliases)
+        combinedIsTrue = tokenIsTrue
         print("Using Just Token: ", combindedAnswer,", ", combinedScore)
         
     elif selfConfidence >= tokenConfidence and selfConfidence >= consistencyConfidence:
         combinedScore = 0.3 * selfConfidence
         combindedAnswer = answer_data.get("answer", "")
-        combinedIsTrue = checkCorrect(answerSelf, answer, question, aliases)
+        combinedIsTrue = selfIsTrue
         print("Using Just Self Verbalisation: ", combindedAnswer,", ", combinedScore)
         
     #could use else probably not to worried about speed though
@@ -225,13 +232,13 @@ for i, item in enumerate(questions, start=1):
     "combined_correct": combinedIsTrue,
     "self_answer": answerSelf,
     "self_score": selfConfidence,
-    "self_correct": checkCorrect(answerSelf, answer, question, aliases),
+    "self_correct": selfIsTrue,
     "cons_answer": answerConsistency,
     "cons_score": consistencyConfidence,
     "cons_correct": resultsCons.get("is_correct"),
     "token_answer": answerToken,
     "token_score": tokenConfidence,
-    "token_correct": checkCorrect(answerToken, answer, question, aliases)
+    "token_correct": tokenIsTrue
     })  
     # if resultsConsistency and confidence and resultsToken:
     #     combined_score = 0.4 * resultsConsistency + 0.3 * confidence + 0.3 * resultsToken

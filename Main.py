@@ -47,7 +47,7 @@ def askModel(prompt, temperature=0):
 
 #two seperate as it makes life easier 
 def make3Prompt(i, j, s, Question):
-    return f""" You are checking if a model's answer is correct given a question and known correct answer.
+    return f""" You are checking if the differnt model answers all share the same meaning.
     Question: {Question}
     Model Answer 1: {i}
     Model Answer 2: {j}
@@ -56,7 +56,7 @@ def make3Prompt(i, j, s, Question):
     Return just one word: true or false. """
 
 def make2Prompt(i, j, Question):
-    return f""" You are checking if a model's answer is correct given a question and known correct answer.
+    return f""" You are checking if the differnt model answers all share the same meaning.
     Question: {Question}
     Model Answer 1: {i}
     Model Answer 2: {j}

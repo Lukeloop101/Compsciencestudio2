@@ -75,8 +75,6 @@ client = OpenAI(
     api_key="ollama"
 )
 
-print("testing it is running something")
-
 #my goal is first to figure out how the differnt models are answering the questions, and then to figure out how to evaluate the answers. I will start with the first part, and then move on to the second part.
 
 # Keep this small at first so runtime is manageable the dataset 

@@ -152,8 +152,8 @@ for i, item in enumerate(questions, start=1):
     
     #scores somewhere above but the names weres
     #tokenConfidence 
-    selfConfidence = answer_data.get("confidence", None)
-    consistencyConfidence = resultsCons.get("consistency_score", None)
+    selfConfidence = float(answer_data.get("confidence") or 0)
+    consistencyConfidence = float(resultsCons.get("consistency_score") or 0)
     #then in each if I check if they are the same usingAI its not perfect But I dont Care
     #combined_score = 0.4 * resultsConsistency + 0.3 * confidence + 0.3 * resultsToken
     combinedScore = 0;
@@ -271,6 +271,9 @@ plt.tight_layout()
 plt.savefig("CombindedConfidencedistribution.png")
 print("\nPlot saved to CombindedConfidencedistribution.png")
 
+#aqctually saving the data in a cvv as I didnt
+df.to_csv("combined_results.csv", index=False)
+
 #AUROC score
 print("AUROC Scores For Everything")
 print(f"Combined: " + str(round(roc_auc_score(df['combined_correct'], df['combined_score']), 4)))
@@ -291,9 +294,7 @@ print("self Brier", round(brier_score_loss(df["self_correct"],df["self_score"]),
 print("consistency Brier", round(brier_score_loss(df["cons_correct"],df["cons_score"]), 5))
 print("Token Brier", round(brier_score_loss(df["token_correct"],df["token_score"]), 5))
 
-#aqctually saving the data in a cvv as I didnt
-df = pd.DataFrame(resultsCombined)
-df.to_csv("combined_results.csv", index=False)
+
 
     
     #asking

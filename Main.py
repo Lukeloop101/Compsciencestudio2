@@ -5,6 +5,7 @@ from consistency.responseconsistency import analyse_question
 from token_probability.scorer import get_token_prob_score
 import pandas as pd
 from sklearn.metrics import roc_auc_score
+from sklearn.metrics import brier_score_loss
 
 from self_verbalisation.SelfVerbalisation import (
     ask_model,
@@ -276,5 +277,23 @@ print(f"Combined: " + str(round(roc_auc_score(df['combined_correct'], df['combin
 print(f"Self: " + str(round(roc_auc_score(df['self_correct'], df['self_score']), 4)))
 print(f"Consistency: " + str(round(roc_auc_score(df['cons_correct'], df['cons_score']), 4)))
 print(f"Token: " + str(round(roc_auc_score(df['token_correct'], df['token_score']), 4)))
+
+#Accuracy
+print("Accuracy for all")
+print("Combined", round(df["combined_correct"].mean(), 5))
+print("Self", round(df["self_correct"].mean(), 5))
+print("Consistency", round(df["cons_correct"].mean(), 5))
+print("Token", round(df["token_correct"].mean(), 5))
+
+#brier
+print("Combined Brier", round(brier_score_loss(df["combined_correct"],df["combined_score"]), 5))
+print("self Brier", round(brier_score_loss(df["self_correct"],df["self_score"]), 5))
+print("consistency Brier", round(brier_score_loss(df["cons_correct"],df["cons_score"]), 5))
+print("Token Brier", round(brier_score_loss(df["token_correct"],df["token_score"]), 5))
+
+#aqctually saving the data in a cvv as I didnt
+df = pd.DataFrame(resultsCombined)
+df.to_csv("combined_results.csv", index=False)
+
     
     #asking

@@ -103,7 +103,7 @@ for i, item in enumerate(questions, start=1):
     answer = item["answer"]
     aliases = item["aliases"]
     print("\n#################################################################################")
-    print(f"[{i}/200] {question}")
+    print(f"[{i}] {question}")
     
     # This is the entire conistency for each with long output recheck
     resultsCons = analyse_question(question, answer, aliases, n=10)

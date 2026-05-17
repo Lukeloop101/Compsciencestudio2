@@ -1,0 +1,301 @@
+question,combined_answer,combined_score,combined_correct,self_answer,self_score,self_correct,cons_answer,cons_score,cons_correct,token_answer,token_score,token_correct
+Who was the man behind The Chipmunks?,ross bagdasarian sr,0.73,False,Ross Bagdasarian Sr.,0.87,False,ross bagdasarian sr,0.6,False,ross bagdasarian sr,0.7237,False
+Which Lloyd Webber musical premiered in the US on 10th December 1993?,sunset boulevard,0.81,True,Sunset Boulevard,0.79,True,sunset boulevard,0.8,True,sunset boulevard,0.8369,True
+Who was the next British Prime Minister after Arthur Balfour?,sir henry campbellbannerman,0.52,True,Herbert Henry Asquith,0.72,False,sir henry campbellbannerman,0.5,True,henry campbellbannerman,0.9346,False
+Who had a 70s No 1 hit with Kiss You All Over?,exile,0.93,True,Exile,0.79,True,exile,1.0,True,exile,0.993,True
+What claimed the life of singer Kathleen Ferrier?,breast cancer,0.78,True,Cancer,0.71,True,breast cancer,0.6,True,breast cancer,0.9597,True
+Rita Coolidge sang the title song for which Bond film?,octopussy,0.85,True,Octopussy,0.59,True,octopussy,0.9,True,octopussy,0.9984,True
+What was the last US state to reintroduce alcohol after prohibition?,mississippi,0.71,False,Mississippi,0.73,False,mississippi,0.4,False,mississippi,0.9165,False
+Which actress was voted Miss Greenwich Village in 1942?,lauren bacall,0.6,True,Lauren Bacall,0.62,True,lauren bacall,0.2,True,lauren bacall,0.891,True
+What is the Japanese share index called?,nikkei 225,0.94,True,Nikkei 225,0.85,True,nikkei 225,1.0,True,nikkei 225,0.9643,True
+What was the name of Michael Jackson's autobiography written in 1988?,moonwalk,0.67,True,Moonwalk,0.56,True,moonwalk,0.8,True,moonwalk,0.6498999999999999,True
+In which decade did stereo records first go on sale?,1950s,0.68,False,1958,0.62,False,1950s,0.8,False,1958,0.6332,False
+In what year's Olympics were electric timing devices and a public-address system used for the first time?,1936,0.67,False,1936,0.79,False,1936,0.3,False,1936,0.8685,False
+Which volcano in Tanzania is the highest mountain in Africa?,mount kilimanjaro,0.92,True,Kilimanjaro,0.95,True,mount kilimanjaro,0.9,True,kilimanjaro,0.9196,True
+The flag of Libya is a plain rectangle of which color?,green,0.7,True,Green,0.83,True,green,0.3,True,green,0.8931,True
+Of which African country is Niamey the capital?,niger,0.95,True,Niger,0.83,True,niger,1.0,True,niger,0.9954,True
+Who was the director of the CIA from 1976-81?,stansfield turner,0.94,False,Stansfield Turner,0.83,False,stansfield turner,1.0,False,stansfield turner,0.9812,False
+Which musical featured the song The Street Where You Live?,my fair lady,0.97,True,My Fair Lady,0.89,True,my fair lady,1.0,True,my fair lady,0.9997,True
+"""Who was the target of the failed """"Bomb Plot"""" of 1944?""",adolf hitler,0.51,True,Winston Churchill,0.62,False,adolf hitler,0.5,True,adolf hitler,0.8962,True
+Who had an 80s No 1 hit with Hold On To The Nights?,richard marx,0.83,True,Dennis DeYoung,0.72,False,richard marx,1.0,True,richard marx,0.7736000000000001,True
+Who directed the classic 30s western Stagecoach?,john ford,0.95,True,John Ford,0.95,True,john ford,1.0,True,john ford,0.9178,True
+Dave Gilmore and Roger Waters were in which rock group?,pink floyd,0.9,True,Pink Floyd,0.95,True,pink floyd,1.0,True,pink floyd,0.7974,True
+Which highway was Revisited in a classic 60s album by Bob Dylan?,highway 61,0.89,True,Highway 61,0.89,True,highway 61,0.8,True,highway 61,0.9514,True
+Which was the only eastern bloc country to participate in the 1984 LA Olympics?,romania,0.86,True,Romania,0.81,True,romania,0.8,True,romania,0.9529,True
+Which 90s sci fi series with James Belushi was based on Bruce Wagner's comic strip of the same name?,wild palms,0.82,True,Wild Palms,0.42,True,wild palms,1.0,True,wild palms,0.9839,True
+If I Were A Rich Man Was a big hit from which stage show?,fiddler on the roof,0.94,True,Fiddler on the Roof,0.95,True,fiddler on the roof,0.9,True,fiddler on the roof,0.9508,True
+Men Against the Sea and Pitcairn's Island were two sequels to what famous novel?,mutiny on the bounty,0.83,True,Mutiny on the Bounty,0.95,True,mutiny on the bounty,0.5,True,mutiny on the bounty,0.9992,True
+What was Truman Capote's last name before he was adopted by his stepfather?,Capote,0.22,False,Capote,0.73,False,lane,0.1,False,long,0.14039999999999997,False
+"In Lewis Carroll's poem The Hunting of the Snark, what did the elusive, troublesome snark turn into to fool hunters?",a boojum,0.78,True,a Boojum,0.83,True,a boojum,0.7,True,a boojum,0.8075,True
+"In the Bible, who did the sun and moon stand still before?",joshua,0.94,True,Joshua,0.95,True,joshua,0.9,True,joshua,0.9675,True
+What Michelle Pfeiffer movie got a boost from the Coolio song Gangsta's Paradise?,dangerous minds,0.9,True,Dangerous Minds,0.79,True,dangerous minds,0.9,True,dangerous minds,0.9813,True
+What was President Gerald Ford's middle name?,Gerald Rudolph Ford Jr.,0.28,True,Gerald Rudolph Ford Jr.,0.95,True,ellsworth,0.2,False,ellison,0.5818,False
+Art Garfunkel trained for which profession although he didn't qualify?,dentistry,0.4,False,medicine,0.72,False,dentistry,0.2,False,dentistry,0.8604,False
+Who was the last inmate of Spandau jail in Berlin?,gustav wagenfuhr,0.21,False,"John George Haigh's nemesis, Rudolf Hess and John George Haigh were both executed but there is evidence that the last inmate to be held at Spandau Prison was actually Rudolf Hess. However, some sources suggest it could have been another prisoner.",0.43,True,oskar fischer,0.1,False,gustav wagenfuhr,0.5136000000000001,False
+What was Eddie Murphy's first movie?,48 hrs,0.85,False,48 Hrs.,0.83,True,48 hrs,0.7,False,48 hrs,0.9718,True
+In the 80s who wrote the novel Empire of The Sun?,jg ballard,0.95,True,J.G. Ballard,0.85,True,jg ballard,1.0,True,jg ballard,0.9834,True
+Kagoshima international airport is in which country?,japan,0.8,True,Japan,0.95,True,japan,1.0,True,japan,0.5441,True
+In which sport could the Pacers take on the Pistons?,basketball,0.92,True,Basketball,0.95,True,basketball,0.9,True,basketball,0.914,True
+Kim Carnes' nine weeks at No 1 with Bette Davis Eyes was interrupted for one week by which song?,wind beneath my wings,0.39,False,Angel Is a Madman,0.62,False,an american star is born,0.1,False,wind beneath my wings,0.9853,False
+Where in Canada is the Lion's Gate bridge?,vancouver british columbia,0.82,True,"Vancouver, British Columbia",0.83,True,vancouver british columbia,0.6,True,vancouver,0.9836,True
+What was Walter Matthau's first movie?,strangers on a train 1951,0.67,False,Strangers on a Train (1951),0.74,False,strangers on a train 1951,0.6,False,strangers on a train 1951,0.6656,False
+Otis Barton was a pioneer in exploring where?,the worlds oceans using submersibles,0.53,False,the deep ocean,0.83,True,the worlds oceans using submersibles,0.1,False,the deep ocean,0.6228,True
+Where in England was actor Nigel Hawthorne born?,derbyshire,0.45,False,Essex,0.58,False,derbyshire,0.2,False,derbyshire,0.9655,False
+"What mythological beast has the head of a man, the body of a lion, and the tail and feet of a dragon?",manticore,0.62,True,Manticore,0.79,True,basilisk,0.3,False,manticore,0.9626,True
+"In Greek mythology, who were Arges, Brontes and Steropes?",the cyclopes,0.82,True,"The Cyclopes, three one-eyed giants.",0.73,True,the cyclopes,0.7,True,the cyclopes,0.988,True
+Which musician founded the Red Hot Peppers?,anthony kiedis,0.42,False,"Anthony Kiedis, Flea and others but primarily Anthony Kiedis is known as the lead vocalist.",0.53,False,anthony kiedis,0.2,False,anthony kiedis,0.9052,False
+Where did the Shinning Path terrorists operate?,peru,0.66,True,Peru,0.83,True,peru,0.3,True,peru,0.8064,True
+How old was Jimi Hendrix when he died?,27 years old,0.75,True,27 years old,0.92,True,27 years old,0.7,True,27 years,0.6606000000000001,True
+Which Brit broke the land speed record in 1990 in Thrust 2?,richard noble,0.87,True,Richard Noble,0.79,True,richard noble,1.0,True,richard noble,0.8229,True
+In which state was Gene Vincent born?,virginia,0.74,True,Virginia,0.65,True,virginia,0.6,True,virginia,0.9228,True
+How was the European Recovery Program in the 1940s more commonly known?,the marshall plan,0.96,True,The Marshall Plan,0.93,True,the marshall plan,1.0,True,marshall plan,0.9647,True
+Brandon Lee died during the making of which movie?,the crow,0.96,True,The Crow,0.95,True,the crow,1.0,True,the crow,0.9323,True
+Who had a 70s No 1 hit with Let's Do It Again?,the staple singers,0.89,True,The Staple Singers,0.65,True,the staple singers,1.0,True,the staple singers,0.9935,True
+Who had a Too Legit To Quit Tour?,mc hammer,0.95,True,MC Hammer,0.83,True,mc hammer,1.0,True,mc hammer,0.9999,True
+"""According to Rudyard Kipling what were the """"two imposters"""" to meet and treat the same day?""",triumph and defeat,0.72,False,Success and Failure,0.83,False,triumph and defeat,0.4,False,triumph and defeat,0.8727,False
+Who is the most successful UK solo artist in the USA?,elton john,0.86,True,Elton John,0.85,True,elton john,0.8,True,elton john,0.9048,True
+Which country does the airline TAAG come from?,angola,0.91,True,Angola,0.73,True,angola,1.0,True,angola,0.9682,True
+Which US No 1 single came from Diana Ross's platinum album Diana?,upside down,0.62,True,Upside Down,0.75,True,im coming out,0.4,False,upside down,0.9822,True
+River Phoenix died during the making of which movie?,dark blood,0.5,True,Dark Blood,0.62,True,dark blood,0.4,True,darkness falls,0.47629999999999995,False
+Which artist David was born in Bradford UK?,david hockney,0.88,True,David Hockney,0.72,True,david hockney,1.0,True,david hockney,0.9221,True
+What is Mel Gibson's middle name?,gerard,0.44,False,Edward,0.59,False,gerard,0.3,False,gerard,0.871,False
+Richard Daley was mayor of which city for 21 years?,chicago,0.88,True,Chicago,0.93,True,chicago,0.9,True,chicago,0.8207,True
+"""In which movie did Garbo say, """"I want to be alone"""".""",grand hotel,0.81,True,Grand Hotel (1932),0.83,True,grand hotel,0.8,True,grand hotel,0.8003,True
+What is Osbert Lancaster best known for producing?,his cartoons and drawings of london architecture,0.32,True,"Cartoonist and author of the 'Punch' magazine books, particularly 'They Came to a City' and 'The Orwellian Collected Works'.",0.67,False,his cartoons and drawings of london architecture,0.1,True,cartoons,0.7224999999999999,True
+Who was the defending champion when Martina Navratilova first won Wimbledon singles?,chris evertlloyd,0.41,False,Chris Evert,0.79,False,chris evertlloyd,0.5,False,chris evertlloyd,0.6594,False
+Who was the first US-born winner of golf's British Open?,holmes,0.23,False,Richard S. Tufts,0.65,False,holmes,0.1,False,ben hogan,0.8485,False
+In which country is the Sky Train Rail bridge?,thailand,0.76,False,Thailand,0.73,False,thailand,0.6,False,thailand,0.914,False
+What was the Paramount Film Company originally called?,the famous players film company,0.62,True,Adolph Zukor's Famous Players Film Company,0.75,True,the famous players film company,0.2,True,famous players,0.835,True
+Who was the first person after Scott to reach the South Pole overland?,roald amundsen,0.79,False,Roald Amundsen,0.95,False,roald amundsen,0.4,False,roald amundsen,0.9544,False
+Which journalist first told the world about the My Lai massacre?,seymour hersh,0.95,True,Seymour Hersh,0.85,True,seymour hersh,1.0,True,seymour hersh,0.98,True
+What is the name of Terence and Shirley Conran's dress designer son?, Jasper Conran,0.22,True, Jasper Conran,0.72,True,stephen conran,0.2,False,benjamin,0.5811,False
+Which drink did The Spice Girls promote?,pepsi,0.56,True,Pepsi,0.72,True,pepsi,0.4,True,pepsi max,0.5641,True
+Who was the youngest brother in the Beach Boys?,carl wilson,0.68,True,Carl Wilson,0.62,True,carl wilson,0.7,True,carl wilson,0.7148,True
+Who first hosted Family Feud?,richard dawson,0.94,True,Richard Dawson,0.92,True,richard dawson,1.0,True,richard dawson,0.9166,True
+What did the Lone Ranger's title Kemo Sabe mean in Apache?,trusted friend,0.66,False,Trusted Friend,0.82,False,trusted friend,0.3,False,trusted friend,0.8101,False
+Who or what was Gentle Ben in the 60s TV series?,a giant brown bear,0.49,True,"a black bear named Gentle Ben, who was the pet of a young boy named Mark Wedloe in the 1967-69 TV series",0.74,False,a giant brown bear,0.2,True,a giant brown bear,0.5158,False
+Which 70s show was based on the British show Till Death Us Do Part?,all in the family,0.87,True,All in the Family,0.79,True,all in the family,0.9,True,all in the family,0.8976,True
+On what date in 1969 did Neil Armstrong first set foot on the Moon?,july 20 1969,0.68,True,"July 20, 1969",0.95,True,july 20 1969,0.6,True,july 20th,0.5474,True
+Bandar Seri Begawan International airport is in which country?,brunei,0.91,True,Brunei,0.85,True,brunei,1.0,True,brunei,0.8994,True
+What was the profession of Paul Strand (1890 - 1976)?,photographer,0.77,True,Photographer,0.83,True,photographer,0.5,True,photographer,0.9398,True
+Who had a 60s No 1 with Downtown?,petula clark,0.85,True,Petula Clark,0.83,True,petula clark,0.9,True,petula clark,0.8398,True
+"Who was born first, Kiefer Sutherland or Christian Slater?",kiefer sutherland,0.93,True,Kiefer Sutherland,0.78,True,kiefer sutherland,1.0,True,kiefer sutherland,0.9828,True
+"To the nearest two, how many tennis Grand Slam titles did Jimmy Connors win?",8,0.68,False,8,0.73,False,8,0.4,False,eight,0.8597,False
+Who was the Georgia Peach?,ty cobb,0.62,True,Ty Cobb,0.85,True,ty cobb,0.1,True,ty cobb,0.8319,True
+Who set fire to his guitar at the Monterey Pop festival in 19676?,jimi hendrix,0.97,True,Jimi Hendrix,0.95,True,jimi hendrix,1.0,True,jimi hendrix,0.9737,True
+Della Street was whose secretary?,perry masons,0.8,True,Perry Mason's,0.95,True,perry masons,0.8,True,perry masons,0.6968,True
+"In music, who was Sweet and Innocent and Too Young?",connie francis,0.8,False,Connie Francis,0.75,False,connie francis,0.7,False,connie francis,0.9186,False
+Who is featured on Puff Daddy's Can't Hold Me Down?,mase,0.29,True,"Jimmy Page and Mary J. Blige, but specifically Jimmy Page does not appear on the song, it was a rumor.",0.57,False,mase,0.3,True,mase,0.5073,True
+What had Edmond Hillary worked at before taking up mountain climbing?,royal new zealand air force,0.42,False,Royal New Zealand Air Force and Oxford University,0.79,False,royal new zealand air force,0.2,False,royal new zealand air force,0.8958,False
+In which American state is the Isabella Stewart Gardner Museum?,massachusetts,0.95,True,Massachusetts,0.93,True,massachusetts,1.0,True,massachusetts,0.926,True
+Benina international airport is in which country?,libya,0.9,True,Libya,0.78,True,libya,1.0,True,libya,0.9208,True
+Beloved in 1999 was whose first movie since The Color Purple in 1985?,Whoopi Goldberg,0.25,False,Whoopi Goldberg,0.83,False,octavia spencer,0.1,False,moniques,0.6732,False
+Which Star Trek star directed Three Men and a Baby?,leonard nimoy,0.78,True,Leonard Nimoy,0.43,True,leonard nimoy,1.0,True,leonard nimoy,0.8738,True
+Which sitcom star appeared on the big screening The Object of My Affection?,jennifer aniston,0.27,True,Jennifer Aniston,0.59,True,jennifer aniston,0.3,True,penny marshall,0.5294,False
+"""Which character did Julia """"Roberts play in Steven Spielberg's Hook?""",tinkerbell,0.32,True,Tinker Bell,0.65,True,tinker bell,0.2,True,tinkerbell,0.7905,True
+Which US president did Anthony Hopkins play in a film whose title was simply his name?,nixon,0.85,True,Nixon,0.83,True,nixon,1.0,True,nixon,0.7484,True
+Which movie was a biopic about the life of David Helfgott?,shine,0.91,True,Shine,0.92,True,shine,0.9,True,shine,0.9111,True
+Which film director guested as the FBI Director in The Silence of the Lambs?,jonathan demme,0.83,False,Jonathan Demme,0.95,False,jonathan demme,0.6,False,jonathan demme,0.9018,False
+In which sci fi classic did the space ship Nostromo first appear?,alien 1979,0.79,True,Alien (1979),0.85,True,alien 1979,0.6,True,alien,0.879,True
+Nigel Hawthorne was Oscar nominated for The Madness of which King?,george iii,0.68,True,George III,0.95,True,george iii,0.4,True,george iii,0.6806,True
+Which Swedish actress won the Best Supporting Actress Oscar for Murder on the Orient Express?,ingrid bergman,0.83,True,Ingrid Bergman,0.85,True,ingrid bergman,0.6,True,ingrid bergman,0.999,True
+Which Oscar-nominated film had You Sexy Thing as its theme song?,the full monty,0.57,True,Scott Pilgrim vs. the World,0.58,False,the full monty,0.2,True,the full monty,0.8446,True
+Which Joan's career revived in Whatever Happened to Baby Jane?,bette davis,0.57,False,Bette Davis,0.85,False,joan crawford,0.4,True,bette davis,0.7916,False
+Which much-loved actor won the Best Actor Oscar for The Philadelphia Story?,james stewart,0.76,True,James Stewart,0.78,True,james stewart,0.7,True,james stewart,0.7799,True
+Which legendary dancer was Oscar-nominated for The Towering Inferno?,fred astaire,0.66,True,Fred Astaire,0.42,True,fred astaire,0.7,True,fred astaire,0.8012,True
+What was the name of the brothel in The Best Little Whorehouse in Texas?,the chicken ranch,0.64,True,The Chicken Ranch,0.79,True,the chicken ranch,0.3,True,the chicken ranch,0.7931,True
+Who was the male star of the movie The Man of La Mancha?,peter otoole,0.91,True,Peter O'Toole,0.85,True,peter otoole,1.0,True,peter otoole,0.8853,True
+What relation is Joey Richardson to Vanessa Redgrave?,daughterinlaw,0.47,True,"Joey Richardson is a child of Vanessa Redgrave's daughter, Karis Goddard.",0.42,True,daughterinlaw,0.3,True,daughterinlaw,0.6343,True
+Melanie Molitor is the mom of which tennis world NO 1?,martina hingis,0.71,True,Martina Hingis,0.73,True,martina hingis,0.3,True,martina hingis,0.993,True
+Marc Dutroux hit the headlines over a 'house of horrors' in which country?,belgium,0.93,True,Belgium,0.83,True,belgium,1.0,True,belgium,0.9647,True
+On which date in 1945 did Hitler take cyanide then shoot himself?,april 30th,0.78,True,"April 30, 1945",0.95,True,april 30th,0.7,True,april 30th,0.7005,True
+In which river is the Boulder Dam?,colorado river,0.79,True,Colorado River,0.72,True,colorado river,1.0,True,colorado river,0.688,True
+"Which sports event was first held at Worcester, Massachusetts in 1927?",worcester marathon,0.27,False,The Boston Marathon,0.63,False,modern pentathlon world championships,0.1,False,worcester marathon,0.6728000000000001,False
+In which European city is the Belvederen Gallery?,vienna,0.46,True,"Vatican City, Rome",0.72,False,vienna,0.4,True,vienna,0.8558,True
+How old was Woody Herman when he founded his own orchestra?,Woody Herman was 29 years old when he founded his own orchestra.,0.18,False,Woody Herman was 29 years old when he founded his own orchestra.,0.59,False,20 years old,0.3,False,25 years,0.4577,False
+For which movie did Katharine Hepburn win her second Oscar?,guess whos coming to dinner,0.63,True,Guess Who's Coming to Dinner (1967),0.59,True,guess whos coming to dinner,0.8,True,guess whos coming to dinner,0.9829,True
+Who had a 60s No 1 hit with This Diamond Ring?,gary lewis and the playboys,0.77,True,Gary Lewis and the Playboys,0.73,True,gary lewis and the playboys,0.9,True,gary lewis and the playboys,0.7106,True
+The world was first aware of the Chernobyl disaster after detectors were triggered at a nuclear plant in which country?,sweden,0.71,True,Ukraine,0.8,False,sweden,0.4,True,ukraine,0.8757,False
+In which country was the first permanent bungee jumping site situated?,new zealand,0.9,True,New Zealand,0.73,True,new zealand,1.0,True,new zealand,0.9636,True
+Who succeeded Brezhnev as Soviet premier?,andropov,0.76,True,Yuri Andropov,0.83,True,andropov,0.4,True,andropov,0.98,True
+In the late 60s Owen Finlay MacLaren pioneered what useful item for parents of small chldren?,baby food packaging,0.51,False,the baby monitor,0.72,False,baby food packaging,0.2,False,baby monitor,0.5942000000000001,False
+In which city's shipyard was Solidarity set up?,gdańsk,0.85,True,Gdańsk,0.73,True,gdańsk,0.9,True,gdańsk,0.9133,True
+Which female singer was born on exactly the same day as impressionist Rich Little?,diana ross,0.29,False,Sheryl Crow,0.43,False,aretha franklin and joan rivers,0.1,False,diana ross,0.733,False
+What is Harrison Ford's real name?,Alan Wilmar Franklin Ford,0.29,False,Alan Wilmar Franklin Ford,0.98,False,william richard ford,0.1,False,william thomas ford,0.16949999999999998,False
+Who's home runs record did Mark McGwire break in the 1998 season?,roger maris,0.3,True,"Roger Maris' home run record of 61 was broken by Mark McGwire, who hit 70 home runs in the 1998 season",0.67,True,roger maris record,0.4,True,roger maris,0.7603,True
+Who won baseball's first World Series of the 80s?,philadelphia phillies,0.88,True,Philadelphia Phillies,0.82,True,philadelphia phillies,1.0,True,philadelphia phillies,0.8244,True
+What was Pete Sampras seeded when he won his first US Open?,1st,0.51,False,1,0.69,True,second,0.2,False,1st,0.7671,False
+"""Which boxer famously said,"""" If I can't beat this bum take my name off the record books?""""""",rocky marciano,0.47,True,Joe Louis,0.73,False,rocky marciano,0.6,True,rocky marciano,0.7291000000000001,True
+Where did Jonathan Edwards set his 1995 triple jump world record?,i couldnt find any information on a jonathan edwards setting a 1995 triple jump world record,0.38,False,"Gateshead International Stadium, England",0.43,False,i couldnt find any information on a jonathan edwards setting a 1995 triple jump world record,0.1,False,turin,0.8778,False
+"In baseball, where do the Orioles come from?",baltimore,0.79,True,"Baltimore, Maryland",0.95,True,baltimore,0.5,True,baltimore,0.8974,True
+The Naismith Award is presented in which sport?,college basketball,0.72,True,College Basketball,0.78,False,college basketball,0.4,True,basketball,0.9039,True
+Which cartoon and film character is the nickname of super athlete Michael Johnson?,flash,0.54,False,The Road Runner,0.45,False,flash,0.3,False,the road runner,0.7991,False
+For which team did Babe Ruth blast his last Major League home run?,boston red sox,0.37,False,Boston Red Sox,0.72,False,boston red sox,0.5,False,boston braves,0.7396,True
+What was Warren Beatty's first movie?,splendor in the grass 1961,0.69,True,Splendor in the Grass (1961),0.72,True,splendor in the grass 1961,0.3,True,splendor in the grass,0.954,True
+"Which future Hollywood star got her break as Wonder Girl, Wonder Woman's sister Drusilla?",debra messing,0.32,False,Zoe Kravitz,0.32,False,debra messing,0.4,False,debra messing,0.7971,False
+Mickey Braddock in the 50s series Circus Boy found fame with which surname in which pop band?,harrison,0.28,False,Harrison,0.73,False,harrison,0.2,False,the tremeloes,0.48160000000000003,False
+Which war veteran was Director of News & Special Events for ABC before find fame as a TV cop?,jack webb,0.44,False,George Kennedy,0.65,False,jack webb,0.2,False,jack webb,0.9484,False
+What US sitcom was the first exported to Britain?,i love lucy,0.66,False,"Fawlty Towers is often cited as an influence, but it was actually 'The Dick Van Dyke Show' that was one of the first US sitcoms to be exported to Britain.",0.67,False,i love lucy,0.9,False,i love lucy,0.9862,False
+In Hanna and Barbera's TV cartoons base on The Addams Family who was the voice of Gomez?,john astin,0.8,True,John Astin,0.75,True,john astin,0.6,True,john astin,0.9789,True
+Who was the only female victim to be killed off in the opening credit sequence in Police Squad?,Edith Johnson,0.24,False,Edith Johnson,0.8,False,emily wilson,0.1,False,sgt esterhauss wife,0.43279999999999996,False
+Which US president won the Nobel Peace Prize in 1920?,woodrow wilson,0.63,True,Warren G. Harding,0.29,False,woodrow wilson,1.0,True,woodrow wilson,0.8363,True
+Who beat Tim Henman in his first Wimbledon singles semifinal?,pete sampras,0.78,True,Pete Sampras,0.75,True,pete sampras,0.6,True,pete sampras,0.9324,True
+What relation was Flo Jo to Jackie Joyner Kersee?,longtime rivals and friends,0.44,False,Friend and rival,0.72,False,longtime rivals and friends,0.1,False,friend and rival,0.4758,False
+How long was swimmer Michelle Smith-de Bruin banned for attempting to manipulate a drugs test?,4 years,0.33,True,2 years,0.6,False,3 months and 10 days suspended,0.1,False,4 years,0.8366,True
+Yuan Yuan was caught carrying drugs for which Chinese team?,chinese national football team,0.25,False,Chinese national basketball team,0.57,False,chinese national football team,0.2,False,chinese national football team,0.48340000000000005,False
+Which grand slam did Pete Sampras not win in the 20th century?,french open,0.56,True,US Open,0.79,False,french open,0.8,True,french open,0.804,True
+In which events did Gert Fredriksson win six Olympic gold medals?,Canoing,0.19,True,Canoing,0.63,True,k1 10000 m and k1 1000 m canoe sprints,0.1,False,canoeing and kayaking,0.5266,True
+"How many of his 45 races did Mike Hawthorn, a former Formula One motor racing world champion, win?",3,0.78,True,3,0.79,True,3,0.6,True,three,0.9121,True
+On the Internet what is Spam?,unwanted emails and content,0.53,False,"Unwanted or unsolicited messages, especially commercial advertising, sent to a large number of recipients.",0.85,True,unwanted emails and content,0.1,False,unsolicited emails,0.6182000000000001,True
+In which country did the Internet start?,united states,0.82,True,United States,0.72,True,united states,0.7,True,united states,0.9816,True
+In which year was the Juilliard School founded in New York?,1905,0.9,True,1905,0.95,True,1905,0.9,True,1905,0.8508,True
+"Who wrote My Life and Loves in 1926, originally banned in the US?",frank harris,0.76,True,Frank Harris,0.79,True,frank harris,0.8,True,frank harris,0.7075,True
+What was Blondie's last UK No 1 of the 80s?,rapture,0.58,True,Rapture,0.73,True,rapture,0.3,True,rapture,0.6894,True
+"In baseball, where do the Royals come from?",kansas city,0.82,True,"Kansas City, Missouri",0.95,True,kansas city,0.6,True,kansas city,0.8828,True
+What is the largest city in Ohio?,columbus,0.98,False,Columbus,0.95,False,columbus,1.0,False,columbus,0.9758,False
+In which decade of the 20th century was Anne Bancroft born?,the 1930s,0.77,True,1930s,0.75,True,the 1930s,0.7,True,1930s,0.8486,True
+The Suez Canal connects the Mediterranean Sea to which other Sea?,red sea,0.73,True,Red Sea,0.95,True,red sea,0.5,True,red sea,0.7259,True
+Which rock star did Cindy Crawford name her first son after?,presley,0.62,True,Presley,0.55,True,presley,0.2,True,presley,0.999,True
+Sun Yat Sen overthrew the emperor in which country establishing a republic after 2000 years of imperial rule?,china,0.88,True,China,0.95,True,china,0.8,True,china,0.8756,True
+Who designed the dress which made the most at Diana's dress auction?,victor edelstein,0.44,True,Charles James,0.59,False,victor edelstein,0.3,True,victor edelstein,0.8766,True
+Which Palestinian co-founded al Fatah in 1957?,yasser arafat,0.9,True,Yasser Arafat,0.95,True,yasser arafat,0.8,True,yasser arafat,0.9421,True
+In which country was Earl Spencer's acrimonious divorce settlement heard?,england,0.66,False,United Kingdom,0.78,False,england,0.3,False,england,0.851,False
+"In which North African country was Mohammed Al-Fayed, owner of Harrods department store in London, born?",egypt,0.85,True,Egypt,0.73,True,egypt,0.9,True,egypt,0.9074,True
+Aung San Suu Kyi is a controversial leader in which country?,myanmar burma,0.88,True,Myanmar (Burma),0.85,True,myanmar burma,1.0,True,myanmar,0.8157,True
+Which of the founders of United Artists had the last name nearest the beginning of the alphabet?,pickford,0.42,False,"Pickford, Mary",0.73,False,pickford,0.3,False,pickford,0.8301000000000001,False
+"In La Cage Aux Folles, what was La Cage Aux Folles?",a drag nightclub,0.4,True,"a nightclub in Saint-Tropez, France that is the main setting of the film.",0.79,True,a drag nightclub,0.3,True,a drag club,0.7709,True
+Where was the Fiddler in the musical's title?,on the roof,0.68,True,On the Roof,0.73,True,on the roof,0.5,True,on the roof,0.7898000000000001,True
+South Pacific was set during which war?,world war ii,0.84,True,World War II,0.75,True,world war ii,1.0,True,world war ii,0.7955,True
+What percentage of the earth's surface is covered by Europe?,68,0.38,False,7%,0.73,False,about 68,0.2,True,68,0.9618,False
+Which European town gave its name to a Treaty which symbolizes closer economic links between European countries?,maastricht,0.82,True,Maastricht,0.73,True,maastricht,0.7,True,maastricht,0.9828,True
+Which home of champagne in France was also where the German High Command surrendered in WWII?,compiègne forest,0.63,False,The Compiègne Forest,0.73,False,compiègne forest,0.2,False,rheims,0.8674999999999999,True
+Which was the first European city this century to open an underground railway system?,glasgow,0.38,False,"London, in 1890",0.83,False,london,0.2,False,glasgow,0.9549,False
+Who first drew Mickey Mouse when ?Disney first supplied the voice?,ub iwerks,0.7,True,Ub Iwerks in 1928,0.79,True,ub iwerks,0.2,True,ub iwerks,0.9996,True
+Which actress wrote the novel The Last of the Really Great Whangdoodles?,julie andrews,0.45,True,Joyce Carol Oates,0.79,False,julie andrews,0.5,True,julie andrews,0.7378,True
+Who was the star of the film based on the record Harper Valley PTA by Jeannie C Riley?,shirley jones,0.46,False,Sharon Stone,0.42,False,shirley jones,0.5,False,shirley jones,0.7801,False
+What color golf balls are used on the golf course in Antarctica?,white,0.48,False,White,0.59,False,theyre probably blue but it depends on the course,0.1,False,white,0.7559,False
+Throughout the 80s and 90s Phil Collins recorded on which record label?,virgin records,0.34,False,Virgin Records,0.75,False,virgin records,0.4,False,atlantic,0.5325,True
+On which label did Chuck Berry record in the 1950s and 1960s?,chess records,0.83,True,Chess Records,0.78,True,chess records,1.0,True,chess records,0.7502,True
+What was the name of Michael Jackson's second wife?,lisa marie presley,0.74,False,"None, Michael Jackson only married twice to Lisa Marie Presley and Deborah Rowe, so he did not have a second wife.",0.85,True,lisa marie presley,0.4,False,lisa marie presley,0.902,False
+Which US city was named after a British Prime Minister?,Washington D.C.,0.28,False,Washington D.C.,0.95,False,washington,0.2,False,washington dc,0.5145,False
+"""Who said, To err is human but it feels divine?""""""",Voltaire,0.22,False,Voltaire,0.75,False,oscar wilde,0.5,False,marie antoinette,0.6662,False
+Which singer had a big 60s No 1 with Roses Are Red?,bobby vinton,0.39,True,Tom Jones,0.73,False,bobby vinton,0.4,True,bobby vinton,0.6678,True
+What are the international registration letters of a vehicle from Iceland?,IS,0.28,True,IS,0.95,True,is,0.3,True,ísl,0.5051,False
+Where was the American venue of the Live Aid concert?,john f kennedy stadium,0.85,False,"John F. Kennedy Stadium in Philadelphia, Pennsylvania",0.92,True,john f kennedy stadium,0.6,False,john f kennedy stadium,0.9752,True
+Which was the longest moon landing?,apollo 17,0.72,True,Apollo 17,0.83,True,apollo 17,0.3,True,apollo 17,0.9529,True
+Who had the most expensive presidential inauguration ceremony of the 20th century?,franklin d roosevelt,0.36,False,John F. Kennedy,0.59,False,john f kennedys inauguration,0.2,False,franklin d roosevelt,0.8886000000000001,False
+Who became Israel's head of state in 1993?,ezer weizman,0.91,True,Ezer Weizman,0.72,True,ezer weizman,1.0,True,ezer weizman,0.9965,True
+"In WWII, who was the head of the Nazi party's security service?",heinrich himmler,0.79,False,Heinrich Himmler,0.83,False,heinrich himmler,0.5,False,heinrich himmler,0.99,False
+Which President of the Philippines was deposed in 1986?,ferdinand marcos,0.98,True,Ferdinand Marcos,0.92,True,ferdinand marcos,1.0,True,ferdinand marcos,0.9998,True
+"What kind of disaster claimed some 100,000 lives in Armenia in 1988?",earthquake,0.81,True,Earthquake,0.83,True,earthquake,0.6,True,earthquake,0.963,True
+Which state on the Gulf of Mexico is nearest the end of the alphabet?,texas,0.76,True,Texas,0.79,True,texas,0.8,True,texas,0.6964,True
+Truax Field international airport is in which US state?,wisconsin,0.61,True,Washington,0.83,False,wisconsin,0.9,True,wisconsin,0.8412,True
+In what month was the attack on Pearl Harbor?,december,0.96,True,December,0.95,True,december,1.0,True,december,0.9473,True
+Who did Dr. Crippen murder?,helen barlow,0.22,False,Ethel Le Neve,0.55,False,his wife cora,0.3,True,helen barlow,0.5593,False
+"In the 1904 Olympics, how many of the 23 track and field titles were won by Americans?",12 medals,0.49,False,12,0.75,False,12 medals,0.1,False,12,0.5881000000000001,False
+The Black Hills lie between which two rivers?,the cheyenne and belle fourche,0.62,False,Cheyenne River and Belle Fourche River,0.83,True,the cheyenne and belle fourche,0.1,False,cheyenne and belle fourche,0.851,True
+In what year was the first in-flight movie shown on an internal flight in the USA.,1939,0.24,False,1939,0.79,False,1933,0.4,False,1951,0.7783,False
+In which city was John Lennon murdered?,new york city,0.84,True,New York City,0.85,True,new york city,1.0,True,new york city,0.7239,True
+How was President Kennedy assassinated?,shot by lee harvey oswald,0.76,True,"He was shot by Lee Harvey Oswald in Dallas, Texas.",0.95,True,shot by lee harvey oswald,0.5,True,shot by lee harvey oswald,0.8029,True
+Which caped crusader operated in Gotham City?,batman,0.89,True,Batman,0.95,True,batman,1.0,True,batman,0.7711,True
+Who did Jack Ruby shoot in November 1963?,lee harvey oswald,0.93,True,Lee Harvey Oswald,0.85,True,lee harvey oswald,1.0,True,lee harvey oswald,0.9335,True
+Who was the first American to travel faster than the speed of sound?,chuck yeager,0.91,True,Chuck Yeager,0.85,True,chuck yeager,0.9,True,chuck yeager,0.9712,True
+Who was the first US president Barbara Walters interviewed?,john f kennedy,0.6,False,Richard Nixon,0.71,True,john f kennedy,0.2,False,richard nixon,0.8143,True
+Which orchestral conductor was married to one of the subjects of the film Hillary and Jackie?,daniel barenboim,0.68,True,Daniel Barenboim,0.65,True,daniel barenboim,0.3,True,daniel barenboim,0.9995,True
+Which writer and politician became Lord Tweedsmuir?,john buchan,0.89,True,John Buchan,0.83,True,john buchan,1.0,True,john buchan,0.8421,True
+In what year was the first Tarzan novel published?,1912,0.91,False,1912,0.95,False,1912,0.9,False,1912,0.8941,False
+In which country were motorized ambulances first used?,united states,0.63,False,United States,0.76,False,united states,0.3,False,united states,0.7681,False
+What is the Pacific terminus of the Trans Siberian Railway?,vladivostok,0.95,True,Vladivostok,0.95,True,vladivostok,0.9,True,vladivostok,0.9848,True
+What is the name of the mountain pass which lies between Pakistan and Afghanistan?,khyber pass,0.49,True,Wakhan Pass,0.72,False,khyber pass,0.4,True,khyber pass,0.9135,True
+"What is the name of the group of 1,196 islands in the North Indian Ocean, none bigger than five square miles?",the maldives,0.81,True,The Maldives,0.85,True,the maldives,0.6,True,maldives,0.9456,True
+Which Syrian city is said to be the oldest continually inhabited city in the world?,damascus,0.95,True,Damascus,0.83,True,damascus,1.0,True,damascus,0.9929,True
+Who was king of France at the time of the French Revolution?,king louis xvi,0.76,True,Louis XVI,0.85,True,king louis xvi,0.6,True,louis xvi,0.8198,True
+What is the principal language of Bulgaria?,bulgarian,0.95,True,Bulgarian,0.85,True,bulgarian,1.0,True,bulgarian,0.9769,True
+"What is the name of the cathedral in Red Square, Moscow?",st basils cathedral,0.74,True,St Basil's Cathedral,0.95,True,st basils cathedral,0.7,True,st basils cathedral,0.6166,False
+Which country is known to its people as Suomen Tasavalta?,finland,0.96,True,Finland,0.92,True,finland,1.0,True,finland,0.9612,True
+Which crusade was led by Philip II Augustus of France and Richard I of England?,the third crusade,0.42,True,"The Holy Roman Crusade, also known as the Albigensian Crusade or the Fifth Crusade",0.73,False,the third crusade,0.3,True,third crusade,0.815,True
+In which Netherlands city does the United Nations International Court of Justice sit?,the hague,0.97,True,The Hague,0.95,True,the hague,1.0,True,the hague,0.9657,True
+"In which battle did Harold II, the last Saxon king, lose his life?",battle of hastings,0.83,True,The Battle of Hastings,0.79,True,battle of hastings,0.7,True,battle of hastings,0.9472,True
+Who proclaimed the People's Republic of China in 1949?,mao zedong,0.95,True,Mao Zedong,0.85,True,mao zedong,1.0,True,mao zedong,0.9886,True
+"Which wife of Henry VIII had already married twice before she became queen, and married for a fourth time after Henry's death?",catherine parr,0.8,True,Catherine Parr,0.83,True,catherine parr,0.9,True,catherine parr,0.6966,True
+In which country is the castle that gives the Habsburg dynasty its name?,switzerland,0.55,True,Austria,0.83,False,switzerland,0.6,True,switzerland,0.919,True
+In which parliament has the UK 87 seats for members who are elected for a five0-year term?,House of Commons,0.24,False,House of Commons,0.79,False,house of lords,0.5,False,house of lords,0.7439,False
+What was the former name of the British Green Party?,people party,0.54,False,People Party,0.55,True,people party,0.2,False,people party,0.7827999999999999,True
+"""What is the more common name of the """"simple plurality"""" system of voting?""",firstpastthepost,0.71,True,First-Past-The-Post (FPTP),0.72,True,firstpastthepost,0.5,True,firstpastthepost,0.8547,True
+What word for unthinking patriotism is derived from the name of one of Napoleon's admirers?,bonapartism,0.37,False,Jingoism,0.79,False,chauvinism,0.4,True,bonapartism,0.9185,False
+Which builder of steam engines formed a successful partnership with Matthew Boulton?,james watt,0.95,True,James Watt,0.95,True,james watt,1.0,True,james watt,0.9195,True
+What was the nickname of the French singer Edith Piaf?,the sparrow,0.41,False,The Sparrow,0.87,False,the sparrow,0.2,False,la môme piaf,0.8642,False
+Whose birthday is celebrated by a public holiday on the third Monday in January in the USA?,martin luther king jrs,0.92,True,Martin Luther King Jr.,0.85,True,martin luther king jrs,1.0,True,martin luther king jr,0.9153,True
+What type of coal is brown and fibrous?,lignite,0.91,True,Lignite,0.72,True,lignite,1.0,True,lignite,0.9852,True
+What raw material is used for making glass?,silica sand,0.72,True,Silica sand,0.85,True,silica sand,0.5,True,silica sand,0.7864,True
+What kind of an organism is a truffle?,fungus,0.75,True,Fungus,0.92,True,fungus,0.3,True,fungus,0.9618,True
+What is the name of the strong material found in plant cell walls?,cellulose,0.95,True,cellulose,0.83,True,cellulose,1.0,True,cellulose,0.9943,True
+What name is given to the change of state from liquid to gas?,vaporisation,0.71,False,Vaporization,0.68,True,vaporisation,0.4,False,vaporization,0.9733,True
+"Which branch of science has four fundamental principles: addition, subtraction, multiplication, and division.",mathematics,0.77,True,Arithmetic,0.79,True,mathematics,0.6,True,arithmetic,0.8912,True
+What is the force that opposes the relative motion of two bodies that are in contact?,friction,0.92,True,friction,0.95,True,friction,0.8,True,friction,0.9934,True
+What is the fastest animal on two legs?,the ostrich,0.85,True,Ostrich,0.81,True,the ostrich,0.7,True,ostrich,0.9811,True
+What is the green pigment used by plants to trap sunlight?,chlorophyll,0.98,True,Chlorophyll,0.95,True,chlorophyll,1.0,True,chlorophyll,0.9968,True
+What id the name given to the study of birds?,ornithology,0.98,True,Ornithology,0.95,True,ornithology,1.0,True,ornithology,0.9915,True
+"Of which reptile are there only two species, one living in the Mississippi and the other in China?",alligator,0.75,True,Alligator,0.82,True,alligator,0.6,True,alligator,0.8085,True
+"What type of seaweed grows up to 100 meters in length, and is farmed for its alginates?",kelp,0.86,True,Kelp,0.83,True,kelp,0.9,True,kelp,0.855,True
+Where in a vertebrate would you find the protein myoglobin?,muscle tissue,0.74,True,"Muscle tissue of red-blooded animals, specifically in slow-twitch fibers.",0.85,True,muscle tissue,0.6,True,muscle tissue,0.7551,True
+"What is the most abundant substance in the plant kingdom, which no mammal produces the enzyme to digest?",cellulose,0.94,True,Cellulose,0.92,True,cellulose,0.9,True,cellulose,0.9901,True
+"Which family of insects has species named 'drivers', 'weavers', 'and even individuals called 'soldiers'?",ants,0.54,True,Termites,0.72,False,ants,0.5,True,termites,0.9684,False
+What name is given to the study of animal behavior?,ethology,0.94,True,Ethology,0.83,True,ethology,1.0,True,ethology,0.9721,True
+Mosses are classified as belonging to which part of the plant kingdom?,bryophyta division,0.69,True,Bryophytes,0.83,True,bryophyta division,0.3,True,bryophyta,0.8658,True
+"Which rodent rears its young, called kittens, in a nest called a drey?",squirrel,0.84,True,squirrel,0.83,True,squirrel,0.7,True,squirrel,0.9587,True
+What has a central vein called a midrib?,leaves,0.85,True,A leaf,0.89,True,leaves,0.8,True,leaves,0.8662,True
+"Which mammal constructs a lodge in which to store food, rear young, and pass the winter?",beaver,0.91,True,Beaver,0.83,True,beaver,0.9,True,beaver,0.975,True
+What is the generic word for plants that grow in water or water-logged conditions?,aquatics,0.78,False,hydrophytes,0.79,True,aquatics,0.5,False,hydrophytes,0.9795,True
+"Which teeth are the third molars, and are always the last to0 erupt?",wisdom teeth,0.8,True,Wisdom teeth,0.95,True,wisdom teeth,0.4,True,wisdom teeth,0.9822,True
+What is secreted by the pancreas to regulate blood sugar levels?,insulin and glucagon,0.49,True,Insulin and glucagon,0.83,True,insulin and glucagon,0.8,True,insulin,0.9669,True
+How many chambers has the heart?,four,0.83,True,4,0.95,True,four,0.6,True,four,0.9096,True
+What is the name of the large buttock and thigh muscle?,gluteus maximus,0.84,True,Gluteus Maximus,0.89,True,gluteus maximus,0.6,True,gluteus,0.9846,True
+"When the egg is released from the ovary, what is left behind?",corpus luteum,0.49,True,The follicle is left behind.,0.75,False,corpus luteum,0.3,True,corpus luteum,0.9908,True
+What is the scientific name for the heart's pacemaker?,sinoatrial node san,0.71,True,SA node,0.83,True,sinoatrial node san,0.3,True,sinoatrial node,0.9366,True
+Which hormone helps control ovulation?,estrogen,0.46,False,Estrogen and Luteinizing Hormone (LH),0.83,True,estrogen,0.2,False,estrogen,0.9904,False
+What is the second most common gas in the atmosphere?,oxygen,0.6,True,Nitrogen,0.92,False,oxygen,0.7,True,oxygen,0.9825,True
+What is the term for nutrient enrichment of lakes?,eutrophication,0.95,True,Eutrophication,0.83,True,eutrophication,1.0,True,eutrophication,0.9943,True
+Five-legged creatures have damaged which 1250 mile long wonder of the world?,the great wall of china,0.63,False,The Great Wall of China,0.56,False,the great wall of china,0.6,False,the great wall of china,0.7004,False
+Which radioactive substance sometimes occurs naturally in spring water?,radium,0.51,False,Radon,0.82,True,radium,0.4,False,radium,0.9847,True
+What is the approximate circumference of the earth?,40075 kilometers,0.88,False,"40,075 kilometers",0.85,False,40075 kilometers,0.9,False,40075 kilometers,0.8831,False
+"Which common mineral is used to make casts, moulds, blackboard chalk and plaster of Paris?",gypsum,0.87,True,Gypsum,0.79,True,gypsum,0.8,True,gypsum,0.9805,True
+What name was given to the invisible material once thought to occupy all space?,ether,0.81,True,ether,0.7,True,ether,0.7,True,ether,0.9787,True
+From which areas of space can there be no escape?,event horizons of black holes,0.7,True,"Black Holes, Event Horizons and Singularities",0.89,True,event horizons of black holes,0.3,True,event horizons,0.8685,True
+Who was the first man to walk on the Moon?,neil armstrong,0.98,True,Neil Armstrong,0.95,True,neil armstrong,1.0,True,neil armstrong,0.9925,True
+Proteus and Nereid are moons of which planet?,neptune,0.82,True,Neptune,0.85,True,neptune,0.9,True,neptune,0.7268,True
+What is the Milky Way?,"The galaxy that contains our solar system, consisting of hundreds of billions of stars.",0.28,True,"The galaxy that contains our solar system, consisting of hundreds of billions of stars.",0.92,True,galactic star system,0.3,True,galactic spiral galaxy,0.49139999999999995,False
+Which force is nothing more than the bending of space and time?,gravity,0.89,True,Gravity,0.89,True,gravity,0.8,True,gravity,0.9686,True
+"Which star is as bright as 23 Suns, and is orbited by the Pup?",sirius,0.54,True,Sirius,0.79,True,sirius b,0.1,True,sirius,0.7559,True
+What are the three primary colours of light?,red blue and green,0.4,True,"Red, Green and Blue",0.95,False,red blue and green,0.4,True,red green blue,0.8899,False
+In what film did Oprah Winfrey make her big screen acting debut?,the color purple,0.82,True,The Color Purple,0.8,True,the color purple,0.7,True,the color purple,0.9312,True
+What is the second lightest chemical element?,lithium,0.48,False,Neon,0.83,False,lithium,0.3,False,lithium,0.9662,False
+"Used in mathematics, what is the value of Pi to three decimal places?",3142,0.39,False,3.142,0.95,True,3142,0.9,True,3142,0.982,False
+"What colour is the number 10 on the door of 10 Downing Street? White, Yellow or Brown?",yellow,0.5,False,Yellow,0.43,False,white,0.6,True,yellow,0.921,False
+What was advertised with Eva Herzagovia using the slogan hello boys?,calvin klein jeans,0.46,False,Calvin Klein jeans,0.72,False,calvin klein perfume,0.2,False,calvin klein jeans,0.6192,False
+What number in Bingo is sometimes referred to as Heinz varieties?,57,0.88,True,57,0.62,True,57,1.0,True,57,0.9854,True
+"As at March 2001, who holds the record for scoring the most league goals for the soccer team Arsenal?",thierry henry and ian wright are level on some 147 goals but then david jack is now,0.66,True,Thierry Henry,0.79,False,thierry henry and ian wright are level on some 147 goals but then david jack is now,0.1,True,thierry henry,0.9832,False
+How many verses make up the national anthem God Save The Queen?,four,0.61,False,4 verses,0.7,False,four,0.6,False,four,0.5393,False
+What colour is the cross on the national flag of Switzerland?,white,0.77,True,white,0.78,True,white,0.6,True,white,0.8951,True
+Who was the American President when the Berlin Wall was constructed?,dwight d eisenhower,0.73,False,Dwight D. Eisenhower,0.72,False,dwight d eisenhower,0.6,False,dwight eisenhower,0.83,False
+What is the minimum number of darts a person needs to throw to complete a leg from 501?,9,0.28,True,9,0.95,True,2,0.1,False,three,0.8448,False
+What was the first British football team to win the European Cup?,liverpool,0.34,False,Aston Villa,0.72,False,nottingham forest,0.3,False,liverpool,0.8489,False
+What is the most popular natural attraction in Alaska?,denali national park and preserve,0.63,True,Denali National Park and Preserve,0.72,False,denali national park and preserve,0.4,True,denali national park,0.7249,False
+"What type of acid is extracted from the juice of lemons, oranges, limes, and grapefruit?",citric acid,0.92,True,Citric Acid,0.95,True,citric acid,1.0,True,citric acid,0.8493999999999999,True
+How many pieces are there in a standard set of dominoes?,28 pieces,0.63,True,28,0.72,True,28 pieces,0.5,True,28 pieces,0.6604,True
+What is the acronym for the agency which provides co-operation between police forces worldwide?,interpol,0.85,True,INTERPOL,0.92,True,interpol,0.8,True,interpol,0.8269,True
+"What were Benjy and Laska, which were sent into space in 1958?",Dogs,0.24,False,Dogs,0.79,False,laikas companions laika was alone,0.1,True,laikas companions,0.5644,False
+In what year in the 20th century was the Miss World contest held for the first time?,1951,0.93,True,1951,0.79,True,1951,1.0,True,1951,0.9786,True
+In which year was the Encyclopedia Britannica first published?,1768,0.81,True,1768,0.95,True,1768,0.6,True,1768,0.8735999999999999,True
+"On the London Underground, which is the only line to connect at some point with every other line on the system?",victoria line,0.62,False,Victoria Line,0.73,False,victoria line,0.3,False,victoria line,0.7721,False
+Who wrote The Importance Of Being Earnest?,oscar wilde,0.96,True,Oscar Wilde,0.95,True,oscar wilde,1.0,True,oscar wilde,0.9335,True
+"Thomas Edison, who invented the lightbulb, was afraid of the dark?",irony,0.39,False,"Yes, it is true that Thomas Edison was afraid of the dark.",0.57,True,fascinating irony,0.1,False,irony,0.9858,False
+Taphephobia is the fear of losing your teeth?,odontophobia,0.45,False,"odontophobia is the fear of losing your teeth, taphephobia is actually the fear of being buried alive.",0.95,False,odontophobia,0.3,False,odontophobia,0.8931,False
+The letter t is the second most common letter used in the English language?,false,0.45,False,yes,0.75,False,false,0.2,False,incorrect,0.9809,False
+"The invention of what in 1867, made Alfred Nobel famous?",dynamite,0.98,True,dynamite,0.95,True,dynamite,1.0,True,dynamite,0.9871,True
+What is the most populated city in America?,new york city,0.91,True,New York City,0.95,True,new york city,0.9,True,new york city,0.8855999999999999,True
+What is the only letter of the alphabet which does not appear in any of the names of the 50 American states?,Q,0.28,True,Q,0.92,True,j,0.6,True,q,0.5646,True
+What was the Spice Girls' debut single called?,wannabe,0.93,True,Wannabe,0.95,True,wannabe,1.0,True,wannabe,0.8702,True
+What are the only two musical notes which have no flats?,b and f,0.66,False,B and F,0.92,False,b and f,0.4,False,b and f,0.6655,False
+"From which country do French fries originate? France, Belgium or Switzerland?",belgium,0.95,False,Belgium,0.85,False,belgium,1.0,False,belgium,0.9788,False
+For what novel did J. K. Rowling win the 1999 Whitbread Children's book of the year award?,harry potter and the prisoner of azkaban,0.93,True,Harry Potter and the Prisoner of Azkaban,0.79,True,harry potter and the prisoner of azkaban,1.0,True,harry potter and the prisoner of azkaban,0.9858,True

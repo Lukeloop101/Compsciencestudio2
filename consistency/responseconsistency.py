@@ -1,4 +1,5 @@
 from openai import OpenAI
+#need to chang add remove conisterncy tag for big main but not here for small main
 from consistency.config import MODEL_NAME, BASE_URL, API_KEY
 import re
 from collections import Counter

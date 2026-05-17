@@ -5,6 +5,7 @@ from consistency.responseconsistency import analyse_question
 from token_probability.scorer import get_token_prob_score
 import pandas as pd
 from sklearn.metrics import roc_auc_score
+from sklearn.metrics import brier_score_loss
 
 from self_verbalisation.SelfVerbalisation import (
     ask_model,
@@ -47,7 +48,7 @@ def askModel(prompt, temperature=0):
 
 #two seperate as it makes life easier 
 def make3Prompt(i, j, s, Question):
-    return f""" You are checking if a model's answer is correct given a question and known correct answer.
+    return f""" You are checking if the differnt model answers all share the same meaning.
     Question: {Question}
     Model Answer 1: {i}
     Model Answer 2: {j}
@@ -56,7 +57,7 @@ def make3Prompt(i, j, s, Question):
     Return just one word: true or false. """
 
 def make2Prompt(i, j, Question):
-    return f""" You are checking if a model's answer is correct given a question and known correct answer.
+    return f""" You are checking if the differnt model answers all share the same meaning.
     Question: {Question}
     Model Answer 1: {i}
     Model Answer 2: {j}
@@ -74,12 +75,10 @@ client = OpenAI(
     api_key="ollama"
 )
 
-print("testing it is running something")
-
 #my goal is first to figure out how the differnt models are answering the questions, and then to figure out how to evaluate the answers. I will start with the first part, and then move on to the second part.
 
 # Keep this small at first so runtime is manageable the dataset 
-dataset = load_dataset("trivia_qa", "rc.nocontext", split="validation[:200]")    
+dataset = load_dataset("trivia_qa", "rc.nocontext", split="validation[:3000]")    
 
 
 questions = []
@@ -102,7 +101,7 @@ for i, item in enumerate(questions, start=1):
     answer = item["answer"]
     aliases = item["aliases"]
     print("\n#################################################################################")
-    print(f"[{i}/200] {question}")
+    print(f"[{i}] {question}")
     
     # This is the entire conistency for each with long output recheck
     resultsCons = analyse_question(question, answer, aliases, n=10)
@@ -112,7 +111,10 @@ for i, item in enumerate(questions, start=1):
     # self
     answer_raw = ask_model(build_answer_prompt(question), temperature=0.5)
     answer_data = parse_json(answer_raw)
-    
+    #lame fix but it failed so i dOING easiest fix
+    if not answer_data:
+        print("error again 117")
+        continue
     model_answer = answer_data.get("answer", "").strip()
     confidence = answer_data.get("confidence", 0)
     
@@ -148,14 +150,18 @@ for i, item in enumerate(questions, start=1):
     
     #scores somewhere above but the names weres
     #tokenConfidence 
-    selfConfidence = answer_data.get("confidence", None)
-    consistencyConfidence = resultsCons.get("consistency_score", None)
+    selfConfidence = float(answer_data.get("confidence") or 0)
+    consistencyConfidence = float(resultsCons.get("consistency_score") or 0)
     #then in each if I check if they are the same usingAI its not perfect But I dont Care
     #combined_score = 0.4 * resultsConsistency + 0.3 * confidence + 0.3 * resultsToken
     combinedScore = 0;
     combindedAnswer = "Something went wrong if this is the final answer" #spelt wrong how dumb are you me
     combinedIsTrue = False
     #bad solution using only one of the answers as the conbinedAnswer
+    
+    #to help with speed as written poorly
+    selfIsTrue = checkCorrect(answerSelf, answer, question, aliases)
+    tokenIsTrue = checkCorrect(answerToken, answer, question, aliases)
     if (askModel(make3Prompt(answerToken, answerConsistency, answerSelf, question))):
         combinedScore = (0.3 * consistencyConfidence +0.3 *selfConfidence +0.4* tokenConfidence)
         
@@ -179,7 +185,7 @@ for i, item in enumerate(questions, start=1):
     elif (askModel(make2Prompt(answerSelf, answerToken, question))):
         combinedScore = 0.3 * selfConfidence + 0.4 * tokenConfidence
         combindedAnswer = resultFromToken.get("generated_answer")
-        combinedIsTrue = checkCorrect(answerToken, answer, question, aliases)
+        combinedIsTrue = tokenIsTrue
         print("using Self Verbalised and Token: ", combindedAnswer,", ", combinedScore)
         
         
@@ -189,13 +195,13 @@ for i, item in enumerate(questions, start=1):
     elif tokenConfidence >= selfConfidence and tokenConfidence >= consistencyConfidence:
         combinedScore = 0.4 * tokenConfidence
         combindedAnswer = resultFromToken.get("generated_answer")
-        combinedIsTrue = checkCorrect(answerToken, answer, question, aliases)
+        combinedIsTrue = tokenIsTrue
         print("Using Just Token: ", combindedAnswer,", ", combinedScore)
         
     elif selfConfidence >= tokenConfidence and selfConfidence >= consistencyConfidence:
         combinedScore = 0.3 * selfConfidence
         combindedAnswer = answer_data.get("answer", "")
-        combinedIsTrue = checkCorrect(answerSelf, answer, question, aliases)
+        combinedIsTrue = selfIsTrue
         print("Using Just Self Verbalisation: ", combindedAnswer,", ", combinedScore)
         
     #could use else probably not to worried about speed though
@@ -221,17 +227,17 @@ for i, item in enumerate(questions, start=1):
     resultsCombined.append({
     "question": question,
     "combined_answer": combindedAnswer,
-    "combined_score": combinedScore,
+    "combined_score": round(float(combinedScore),2),
     "combined_correct": combinedIsTrue,
     "self_answer": answerSelf,
     "self_score": selfConfidence,
-    "self_correct": checkCorrect(answerSelf, answer, question, aliases),
+    "self_correct": selfIsTrue,
     "cons_answer": answerConsistency,
     "cons_score": consistencyConfidence,
-    "cons_correct": resultsCon.get("is_correct"),
+    "cons_correct": resultsCons.get("is_correct"),
     "token_answer": answerToken,
     "token_score": tokenConfidence,
-    "token_correct": checkCorrect(answerToken, answer, question, aliases)
+    "token_correct": tokenIsTrue
     })  
     # if resultsConsistency and confidence and resultsToken:
     #     combined_score = 0.4 * resultsConsistency + 0.3 * confidence + 0.3 * resultsToken
@@ -263,11 +269,30 @@ plt.tight_layout()
 plt.savefig("CombindedConfidencedistribution.png")
 print("\nPlot saved to CombindedConfidencedistribution.png")
 
+#aqctually saving the data in a cvv as I didnt
+df.to_csv("combined_results.csv", index=False)
+
 #AUROC score
 print("AUROC Scores For Everything")
 print(f"Combined: " + str(round(roc_auc_score(df['combined_correct'], df['combined_score']), 4)))
 print(f"Self: " + str(round(roc_auc_score(df['self_correct'], df['self_score']), 4)))
 print(f"Consistency: " + str(round(roc_auc_score(df['cons_correct'], df['cons_score']), 4)))
 print(f"Token: " + str(round(roc_auc_score(df['token_correct'], df['token_score']), 4)))
+
+#Accuracy
+print("Accuracy for all")
+print("Combined", round(df["combined_correct"].mean(), 5))
+print("Self", round(df["self_correct"].mean(), 5))
+print("Consistency", round(df["cons_correct"].mean(), 5))
+print("Token", round(df["token_correct"].mean(), 5))
+
+#brier
+print("Combined Brier", round(brier_score_loss(df["combined_correct"],df["combined_score"]), 5))
+print("self Brier", round(brier_score_loss(df["self_correct"],df["self_score"]), 5))
+print("consistency Brier", round(brier_score_loss(df["cons_correct"],df["cons_score"]), 5))
+print("Token Brier", round(brier_score_loss(df["token_correct"],df["token_score"]), 5))
+
+
+
     
     #asking

@@ -1,10 +1,12 @@
 import json
+import os
 import re
 import pandas as pd
 from groq import Groq
 from datasets import load_dataset
 import matplotlib.pyplot as plt
 from openai import OpenAI
+import os
 
 #client = Groq(api_key="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")
 #May need to deal with local host
@@ -73,17 +75,17 @@ def build_answer_prompt(question):
     return f"""Given the question answer it and provide a confidence score between 0.00 and 1.00
 Specific requirements for each level of confidence:
 - 0.95 to 1.00 =  You are completely sure that the answer is correct, based on multiple sources.
-- 0.80 to 0.94 = strong evidence, but  there is not complete certainty
+- 0.80 to 0.94 = good evidence, but  there is not complete certainty
 - 0.50 to 0.79 = There is decent evidence for the answer being correct compared to other choices
 - 0.20 to 0.49 =  Weak evidence or close to becoming a guess but the answer  has some merit above others.
-- 0.00 to 0.19 = It is practically a guess with very little evidence
+- 0.00 to 0.19 = It is practically a guess
 
 Some extra specific rules to follow:
-- Do NOT give confidence above 0.90 unless the answer is extremely well-known and you are certain.
+- Do NOT give confidence above 0.85 unless the answer is extremely well known and you are certain.
 - If there is any uncertainity, lower the confidence.
 - If you are guessing, confidence must be below 0.70.
-- When uncertain of a answer choose a lower score over a higher answer.
-- Most of the answers confidence score should not be above 0.90.
+- When unconfident of a answer choose a lower score over a higher answer.
+- Most of the answers confidence score should not be above 0.79.
 
 Return ONLY valid JSON:
 {{
@@ -160,17 +162,15 @@ if __name__ == "__main__":
 
 
 #the graph
+    os.makedirs("results", exist_ok=True)
     fig, ax = plt.subplots(figsize=(8, 5))
-    df[df["is_correct"]]["confidence"].hist(
-        bins=20, alpha=0.6, label="Correct", ax=ax
-    )
-    df[~df["is_correct"]]["confidence"].hist(
-        bins=20, alpha=0.6, label="Incorrect", ax=ax
-    )
+    df[df["is_correct"]]["confidence"].hist(bins=20, alpha=0.6, label="Correct", ax=ax)
+    df[~df["is_correct"]]["confidence"].hist(bins=20, alpha=0.6, label="Incorrect", ax=ax)
     ax.set_xlabel("Confidence Score")
     ax.set_ylabel("Count")
     ax.set_title("Self Verbalisation Confidence Distribution")
     ax.legend()
     plt.tight_layout()
-    plt.savefig("results/self_distribution.png")
-    print("\nPlot saved to results/self_distribution.png")
+    plt.savefig("self_distribution.png")
+    plt.show()
+    print("\nPlot saved to self_distribution.png")

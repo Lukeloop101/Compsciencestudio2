@@ -80,10 +80,10 @@ Specific requirements for each level of confidence:
 - 0.20 to 0.49 =  Weak evidence or close to becoming a guess but the answer  has some merit above others.
 - 0.00 to 0.19 = It is practically a guess
 
-Some extra specific rules to follow:
+Some extra rules to follow:
 - Do NOT give confidence above 0.85 unless the answer is extremely well known and you are certain.
 - If there is any uncertainity, lower the confidence.
-- If you are guessing, confidence must be below 0.70.
+- If you are guessing, confidence has to be below 0.70.
 - When unconfident of a answer choose a lower score over a higher answer.
 - Most of the answers confidence score should not be above 0.79.
 
@@ -155,8 +155,8 @@ if __name__ == "__main__":
     df = pd.DataFrame(results)
     df.to_csv("trivia_self_confidence_results.csv", index=False)
 
-    print("\n====================")
-    print(f"Final Score: {correct_count}/{total}")
+    print("\n################################")
+    print(f"Final Score: {correct_count}")
     print(f"Accuracy: {correct_count / total * 100:.2f}%")
     print("Saved to trivia_self_confidence_results.csv")
 

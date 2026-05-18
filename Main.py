@@ -7,12 +7,7 @@ import pandas as pd
 from sklearn.metrics import roc_auc_score
 from sklearn.metrics import brier_score_loss
 
-from self_verbalisation.SelfVerbalisation import (
-    ask_model,
-    build_answer_prompt,
-    parse_json,
-    checkCorrect
-)
+from self_verbalisation.SelfVerbalisation import (ask_model,build_answer_prompt,parse_json,checkCorrect)
 
 
 def askModel(prompt, temperature=0):
